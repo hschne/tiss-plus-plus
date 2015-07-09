@@ -3,37 +3,61 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+
+    <script src="../lib/jquery-2.1.4.min.js"></script>
+    <script src="//code.jquery.com/qunit/qunit-1.18.0.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css">
+    <script src="../content_scripts/find_room.js"></script>
+
+    <script>
+        QUnit.test("getRoomLinks_getAllLinks_roomLinksAreEqual_", function( assert ) {
+            var fixture = $("#qunit-fixture")
+            fixture.append("<a href='/events/roomSchedule.xhtml?windowId=ced&amp;roomCode=134&amp;initialDate=20150311' ></a>");
+
+            var room_links = getRoomLinks()[0];
+
+            var expected_room_links = document.getElementById("qunit-fixture")
+                    .getElementsByTagName("a")[0];
+            assert.equal(room_links, expected_room_links)
+        });
+
+        QUnit.test("addButtonToRoomLink_AddDummyButtonNextToLink_TwoButtonsExist", function( assert ) {
+            var fixture = $("#qunit-fixture")
+            fixture.append("<div id='parent'><a id='testlink'>Testlink</a></div>");
+            var testLink = $('#testlink')
+            var button = $( "<div id='object1'/>" );
+
+
+            addButtonToRoomLink(testLink, button);
+
+            var parent = $("#parent")
+            assert.equal($("#parent").children().length, 2);
+        });
+
+        QUnit.test("createRoomLink_CreateButton_ButtonPointsToCorrectLink", function (assert) {
+            var roomLink = createRoomLink("123");
+
+            assert.equal(roomLink.attr('href'), "http://www.wegweiser.ac.at/tuwien/hoersaal/123.html");
+
+        })
+
+        QUnit.asyncTest("retrieveRoomNameList_getRoomNames_roomNamesReturned", function(assert) {
+            var done = assert.async();
+            var results = getMapFromRoomName("some");
+
+            setTimeout(function(){
+                assert.equal(results.length, 1);
+                done();
+            });
+        })
+
+
+
+    </script>
 </head>
 <body>
-
+<div id="qunit"></div>
 <div id="qunit-fixture">
-    <h2>LVA Termine</h2>
-    <table class="standard big">
-        <thead>
-        <tr>
-            <th>Tag</th>
-            <th>Zeit</th>
-            <th>Datum</th>
-            <th>Ort</th>
-            <th>Beschreibung</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Mi
-            </td>
-            <td>16:30 - 18:00
-            </td>
-            <td>11.03.2015 - 17.06.2015
-            </td>
-            <td><a href="/events/roomSchedule.xhtml?windowId=ced&amp;roomCode=134&amp;initialDate=20150311"
-                   target="_blank">Seminarraum 134</a>
-            </td>
-            <td>101.590 UE Analysis 1
-            </td>
-        </tr>
-        </tbody>
-    </table>
 </div>
 </body>
 </html>
