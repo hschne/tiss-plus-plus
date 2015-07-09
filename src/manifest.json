@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "TISS++",
+  "description": "This extension improves TISS with additional functions",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "js": ["jquery.js", "content_script.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}

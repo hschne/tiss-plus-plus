@@ -1,2 +1,2 @@
-# tiss-plus-plus
+# TISS++
 A Google Chrome extension improving TISS
