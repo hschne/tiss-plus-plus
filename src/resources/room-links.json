@@ -1,0 +1,32 @@
+{
+  "rooms": [
+    {
+      "name": "AI Hörsaal",
+      "link": "/tuwien/hoersaal/AIHS.html"
+    },
+    {
+      "name": "Computerübungsraum",
+      "link": "/tuwien/hoersaal/1336.html"
+    },
+    {
+      "name": "Diplomprüfungssaal",
+      "link": "/tuwien/hoersaal/DPRS.html"
+    },
+    {
+      "name": "EI 10 Fritz Paschke Hörsaal",
+      "link": "/tuwien/hoersaal/E10.html"
+    },
+    {
+      "name": "EI 11 Geodäsie Hörsaal",
+      "link": "/tuwien/hoersaal/AIHS.html"
+    },
+    {
+      "name": " EI  1 Petritsch Hörsaal",
+      "link": "/tuwien/hoersaal/E1.html"
+    },
+    {
+      "name": "GM 1 Audi. Max.",
+      "link": "/tuwien/hoersaal/AUDI.html"
+    }
+  ]
+}
