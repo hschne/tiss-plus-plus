@@ -1,0 +1,5 @@
+TODO:
+
+- Add more room links
+- Link to image directly
+- Show images in small popup
