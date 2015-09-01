@@ -8,7 +8,8 @@
   "content_scripts": [
     {
       "matches": ["https://tiss.tuwien.ac.at/course/courseDetails.xhtml*", "https://tiss.tuwien.ac.at/course/educationDetails.xhtml*" ],
-      "js": ["lib/jquery-2.1.4.min.js", "content_scripts/lva-page.js"]
+      "js": ["lib/jquery-2.1.4.min.js", "content_scripts/lva-page.js"],
+      "css": ["css/background.css"]
     }
   ],
   "web_accessible_resources": [

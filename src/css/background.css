@@ -1,3 +1,4 @@
-#button > span.ui-icon-custom {
-    background-image: url(http://placekitten.com/25/25)
+.mapbutton {
+	background-color: white;
+	display: inline-block;
 }

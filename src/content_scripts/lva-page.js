@@ -1,30 +1,41 @@
+function renderRoomButtons(){
 
-function createButton(linkElement) {
-    var currentRoom = linkElement.innerHTML;
+    function createButton(linkElement) {
+        var currentRoom = linkElement.innerHTML;
 
-    function renderButton(linkElement, buttonLink) {
-        var parent = linkElement.parentElement;
-        var parentContent = parent.innerHTML;
-        parent.innerHTML = parentContent + "<a href="+buttonLink+" >Map</a>"
+        var buttonHtml = "<button class='mapbutton'>M</button>";
+
+        function renderButton(linkElement, buttonLink) {
+            var parent = linkElement.parentElement;
+            var parentContent = parent.innerHTML;
+            parent.innerHTML = parentContent + "<a href="+buttonLink+" >" +buttonHtml+"</a>";
+        }
+
+        function getRoomLinkAndRenderButton() {
+            var baseLink = "http://www.wegweiser.ac.at/";
+            $.getJSON(chrome.extension.getURL('/resources/room-links.json'), function (json) {
+                var rooms = json;
+                $.each(rooms, function (index, room) {
+                    if (matchesCurrentRoom(room.name)) {
+                        var link = baseLink + room.link;
+                        renderButton(linkElement, link)
+                    }
+                })
+            });
+        }
+
+        function matchesCurrentRoom(scrapedRoom) {
+            var formattedScrapedRoom = scrapedRoom.replace(" - TU Wien","");
+            if(currentRoom == "EI 7 Hörsaal"){
+                var i =5;
+            }
+            formattedScrapedRoom = formattedScrapedRoom.replace(/ +(?= )/g,"");
+            var formattedTissRoom = currentRoom.replace(" Hörsaal", "");
+            var contains = ((formattedScrapedRoom.indexOf(formattedTissRoom) > -1) || formattedScrapedRoom == formattedTissRoom);
+            return contains;
+        }
+        getRoomLinkAndRenderButton();
     }
-
-    function getRoomLinkAndRenderButton() {
-        var baseLink = "http://www.wegweiser.ac.at/";
-        $.getJSON(chrome.extension.getURL('/resources/room-links.json'), function (json) {
-            var rooms = json.rooms;
-            $.each(rooms, function (index, room) {
-                var roomName = room.name;
-                if (roomName == currentRoom) {
-                    var link = baseLink + room.link;
-                    renderButton(linkElement, link)
-                }
-            })
-        });
-    }
-    getRoomLinkAndRenderButton();
-}
-
-function renderAllRoomButtons(){
 
     var roomLinks =$("a[href^= '/events/roomSchedule.xhtml']");
     roomLinks.each(function () {
@@ -33,6 +44,6 @@ function renderAllRoomButtons(){
     })
 }
 
-renderAllRoomButtons();
+renderRoomButtons();
 
 
