@@ -1,5 +1,12 @@
 TODO:
 
-- Add more room links
-- Link to image directly
-- Show images in small popup
+- Room Maps:
+	- Add more room links
+	- Link to image directly
+	- Show small popup of image (like reddit, if possible!)	
+
+- Registration Reminder
+	- Add button to remind
+	- Imlement google calendar login & writing new event 
+
+- Remove from favourites shortcut
