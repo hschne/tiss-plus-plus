@@ -1,32 +1,778 @@
-{
-  "rooms": [
-    {
-      "name": "AI Hörsaal",
-      "link": "/tuwien/hoersaal/AIHS.html"
-    },
-    {
-      "name": "Computerübungsraum",
-      "link": "/tuwien/hoersaal/1336.html"
-    },
-    {
-      "name": "Diplomprüfungssaal",
-      "link": "/tuwien/hoersaal/DPRS.html"
-    },
-    {
-      "name": "EI 10 Fritz Paschke Hörsaal",
-      "link": "/tuwien/hoersaal/E10.html"
-    },
-    {
-      "name": "EI 11 Geodäsie Hörsaal",
-      "link": "/tuwien/hoersaal/AIHS.html"
-    },
-    {
-      "name": " EI  1 Petritsch Hörsaal",
-      "link": "/tuwien/hoersaal/E1.html"
-    },
-    {
-      "name": "GM 1 Audi. Max.",
-      "link": "/tuwien/hoersaal/AUDI.html"
-    }
-  ]
-}
+[
+  {
+    "link": "/static/plaene/gif/E_HS5_0038_00_1-1.gif",
+    "name": "Computerübungsraum - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_DiplomprBI_0038_00_1-1.gif",
+    "name": "Diplomprüfungssaal BI - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI10_0119_00_1-1.gif",
+    "name": "EI 10 Fritz Paschke Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_GEODHS_0119_00_1-1.gif",
+    "name": "EI 11 Geodäsie Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI1_0037_00_1-1.gif",
+    "name": "EI  1 Petritsch Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI2_0037_00_1-1.gif",
+    "name": "EI  2 Pichelmayer Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI3A_0037_00_1-1.gif",
+    "name": "EI  3A - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI3_0037_00_1-1.gif",
+    "name": "EI  3 Sahulka Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI4_0037_00_1-1.gif",
+    "name": "EI  4 Reithoffer Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI5_0037_00_1-1.gif",
+    "name": "EI  5 Hochenegg Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI6_0037_00_1-1.gif",
+    "name": "EI  6 Eckert Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI7_0119_00_1-1.gif",
+    "name": "EI  7 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI8_0119_00_1-1.gif",
+    "name": "EI  8 Pötzl Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_EI9_0119_00_1-1.gif",
+    "name": "EI  9 Hlawka Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_FHHS8_0035_00_1-1.gif",
+    "name": "FH 8 Nöbauer Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_FHHS1_0035_00_1-1.gif",
+    "name": "FH Hörsaal 1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_FHHS2_0035_00_1-1.gif",
+    "name": "FH Hörsaal 2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_FHHS3_0035_00_1-1.gif",
+    "name": "FH Hörsaal 3 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_FHHS4_0035_00_1-1.gif",
+    "name": "FH Hörsaal 4 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_FHHS5_0035_00_1-1.gif",
+    "name": "FH Hörsaal 5 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_FHHS6_0035_00_1-1.gif",
+    "name": "FH Hörsaal 6 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_FHHS7_0035_00_1-1.gif",
+    "name": "FH Hörsaal 7 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_AudiMax_0081_00_1-1.gif",
+    "name": "GM 1 Audi. Max. - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_RadingerHS_0223_00_1-1.gif",
+    "name": "GM 2 Radinger Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_VortmannHS_0220_00_1-1.gif",
+    "name": "GM 3 Vortmann Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_KnollerHS_0223_00_1-1.gif",
+    "name": "GM 4 Knoller Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_TNFHS_0081_00_1-1.gif",
+    "name": "GM 5 Dekanatshörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_StaatsprfMB_0223_00_1-1.gif",
+    "name": "GM 6 Staatsprüfungssaal MB - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_KlHSSchiffbau_0223_00_1-1.gif",
+    "name": "GM 7 Kleiner Schiffbau Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_GrosserAktz_0038_00_1-1.gif",
+    "name": "Großer Aktzeichensaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS12_0038_00_1-1.gif",
+    "name": "Hörsaal 12 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS14_0038_00_1-1.gif",
+    "name": "Hörsaal 14 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS15_0038_00_1-1.gif",
+    "name": "Hörsaal 15 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS20_0038_00_1-1.gif",
+    "name": "Hörsaal 20 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Hörsaal 26 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS11_0038_00_1-1.gif",
+    "name": "HS 11 Paul Ludwik Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS13_0038_00_1-1.gif",
+    "name": "HS 13 Ernst Melan Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS14A_0038_00_1-1.gif",
+    "name": "HS 14A Günther Feuerstein Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS16_0038_00_1-1.gif",
+    "name": "HS 16 Karl von Terzaghi Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS17_0038_00_1-1.gif",
+    "name": "HS 17 Friedrich Hartmann Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS18_0038_00_1-1.gif",
+    "name": "HS 18 Czuber Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS4_0038_00_1-1.gif",
+    "name": "HS  4 Hochstetter Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS6_0038_00_1-1.gif",
+    "name": "HS  6 Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS7_0038_00_1-1.gif",
+    "name": "HS  7 Schütte-Lihotzky Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS8_0038_00_1-1.gif",
+    "name": "HS  8 Heinz Parkus Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_HS9_0038_00_1-1.gif",
+    "name": "HS  9 Hörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_KleinerAktz1_0038_00_1-1.gif",
+    "name": "Kleiner Aktzeichensaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_KleinerAktz2_0038_00_1-1.gif",
+    "name": "Kleiner Aktzeichensaal 2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Prechtlsaal_0038_00_1-1.gif",
+    "name": "Prechtl-Saal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_StaatsprArch_0038_00_1-1.gif",
+    "name": "Staatsprüfungssaal Architektur - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Theres1_0229_00_1-1.gif",
+    "name": "Theresianumgasse HS 1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Theres2_0229_00_1-1.gif",
+    "name": "Theresianumgasse HS 2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_InfHS_0226_00_1-1.gif",
+    "name": "TREITL Informatikhörsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 030 TVFA - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Maschinenbaugeb.gif",
+    "name": "Seminarraum 100 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Maschinenbaugeb.gif",
+    "name": "Seminarraum 100A - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 101A - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 101C - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 104 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 105 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 105A - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 105B - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 107 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 107/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 113 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 114 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 114A - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 115 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 119 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 121 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 122 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 123 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 124 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 125 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 134 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 134A - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 136 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 137 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 137A - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 138A - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 138B - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 138C - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Operngasse.gif",
+    "name": "Seminarraum 1/3 OPG - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 142 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 152 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 163/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 163/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 163/3 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 164/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 164/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 164/3 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 165/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 165/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 166/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 166/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 166/3 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Seminarraum 166/4 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 181A - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 183/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum 183/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 184/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum 184/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum 184/3 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum 185/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum 186 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 187 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum 187/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum 188/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 202 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 211 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 212-232 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 213 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 222 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 223 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 225 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 233 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 234 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Operngasse.gif",
+    "name": "Seminarraum 2/3 OPG - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 251 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 252 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 253 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 253/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 256 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 257 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 259 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Operngasse.gif",
+    "name": "Seminarraum 260/5 OPG - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 261 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 262 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 265 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 267 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 268 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_KARL1_0273_00_1-1.gif",
+    "name": "Seminarraum 268/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_KARL2_0273_00_1-1.gif",
+    "name": "Seminarraum 268/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 270/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 270/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 270/3 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 303 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 305 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Maschinenbaugeb.gif",
+    "name": "Seminarraum 307 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Maschinenbaugeb.gif",
+    "name": "Seminarraum 307A - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Maschinenbaugeb.gif",
+    "name": "Seminarraum 307B - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum 308 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 311 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 314 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 317 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 320 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 322 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 325/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Seminarraum 325/2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 345 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 351 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 352 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 354 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 357 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum 362 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 366 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 381 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 383 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 384 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Seminarraum 387 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum 388 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum 388/1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 4/253 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 6/253 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 7/253 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Seminarraum 8 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum ARG - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum Floragasse - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Seminarraum RPRO 260 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "Seminarraum Zemanek - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "AFH - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "PC-Raum AGH - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "PC-Raum BIB - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "PC-Raum BIZ (Fachschaft BI) - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "PC-Raum FAV - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "PC-Raum FHSR1 (Schulungsraum) - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "PC-Raum GHBR - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "PC-Raum TR Informatik - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "ZID Internet-Raum FH1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "ZID Internet-Raum FH2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "ZID Internet-Raum FH3 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Operngasse.gif",
+    "name": "ZID Internet-Raum PM1 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Operngasse.gif",
+    "name": "ZID Internet-Raum PM2 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Operngasse.gif",
+    "name": "ZID Internet-Raum PM3 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Favoritenstr.gif",
+    "name": "FAV Informatik Labor - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "EDV Praktikum Physik - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Hauptgeb.gif",
+    "name": "Modelliersaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_UP.gif",
+    "name": "Besprechungsraum Goldenes Lamm - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Besprechungs- und Prüfungsraum 115 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Boecklsaal_0038_00_1-1.gif",
+    "name": "Boecklsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Festsaal_0038_00_1-1.gif",
+    "name": "Festsaal - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Freihaus.gif",
+    "name": "Prüf.- u. Besprechungsraum 101 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Chemiegeb.gif",
+    "name": "Sitzungszimmer 166 - TU Wien"
+  },
+  {
+    "link": "/static/plaene/gif/E_Gusshausstr.gif",
+    "name": "Kontaktraum - TU Wien"
+  }
+]
