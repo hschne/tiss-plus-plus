@@ -1,5 +1,7 @@
 TODO:
 
+- Update readme.md (with planned features and stuffs)
+
 - Room Maps:
 	- Add more room links
 	- Link to image directly
