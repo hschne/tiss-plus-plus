@@ -7,7 +7,7 @@
 
   "content_scripts": [
     {
-      "matches": ["https://tiss.tuwien.ac.at/course/courseDetails.xhtml*", "https://tiss.tuwien.ac.at/course/educationDetails.xhtml*" ],
+      "matches": [ "https://tiss.tuwien.ac.at/*" ],
       "js": ["lib/jquery-2.1.4.min.js", "content_scripts/lva-page.js"],
       "css": ["css/background.css"]
     }
@@ -19,6 +19,5 @@
   "permissions": [
     "tabs",
     "activeTab"
-
   ]
 }
