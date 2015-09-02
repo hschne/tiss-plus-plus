@@ -3,12 +3,11 @@ TODO:
 - Update readme.md (with planned features and stuffs)
 
 - Room Maps:
-	- Add more room links
-	- Link to image directly
+	- Test manually that as many links as possible work (with Tiss)
 	- Show small popup of image (like reddit, if possible!)	
 
 - Registration Reminder
 	- Add button to remind
 	- Imlement google calendar login & writing new event 
 
-- Remove from favourites shortcut
+- "Remove from favourites" shortcut

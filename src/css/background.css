@@ -1,4 +1,18 @@
 .mapbutton {
-	background-color: white;
-	display: inline-block;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+
+    border-left: 5px solid #C75E01;
+    display: inline-block;
+}
+
+.maplink:link,
+.maplink:visited,
+.maplink:hover,
+.maplink:active{
+    text-decoration: none;
 }
