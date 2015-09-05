@@ -4,7 +4,6 @@
   "name": "TISS++",
   "description": "This extension improves TISS with additional functions",
   "version": "1.0",
-
   "content_scripts": [
     {
       "matches": [ "https://tiss.tuwien.ac.at/*" ],
@@ -12,6 +11,9 @@
       "css": ["css/background.css"]
     }
   ],
+  "icons": {
+    "128": "resources/logo.png"
+  },
   "web_accessible_resources": [
     "resources/*",
     "lib/*"

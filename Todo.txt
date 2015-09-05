@@ -6,6 +6,9 @@ TODO:
 	- Test manually that as many links as possible work (with Tiss)
 	- Show small popup of image (like reddit, if possible!)	
 
+- Recent LVAs:
+	- On the "Lehrveranstaltungen" site below the search button show a table of recently visisted lvas.
+
 - Registration Reminder
 	- Add button to remind
 	- Imlement google calendar login & writing new event 
