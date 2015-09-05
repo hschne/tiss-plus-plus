@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": [ "https://tiss.tuwien.ac.at/*" ],
-      "js": ["lib/jquery-2.1.4.min.js", "content_scripts/lva-page.js", "content_scripts/lva-search.js"],
+      "js": ["lib/jquery-2.1.4.min.js", "content_scripts/lva-page.js", "content_scripts/lva-search.js", "content_scripts/tiss-plus-plus.js"],
       "css": ["css/background.css"]
     }
   ],
@@ -19,7 +19,8 @@
     "lib/*"
   ],
   "permissions": [
-    "storage",
-    "activeTab"
+    "tabs",
+    "activeTab",
+    "storage"
   ]
 }

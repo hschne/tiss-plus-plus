@@ -7,8 +7,8 @@ TODO:
 	- Show small popup of image (like reddit, if possible!)	
 
 - Recent LVAs:
-	- On the "Lehrveranstaltungen" site below the search button show a table of recently visisted lvas.
-	- Save lva page in visited lvas list (on visit)
+	- need to implement storage
+	- implement sending current Url to background page
 	- Render last lvas in lva search list
 
 - Registration Reminder
