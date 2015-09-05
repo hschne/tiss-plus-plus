@@ -3,7 +3,7 @@
 
   "name": "TISS++",
   "description": "This extension improves TISS with additional functions",
-  "version": "1.0",
+  "version": "0.1",
   "content_scripts": [
     {
       "matches": [ "https://tiss.tuwien.ac.at/*" ],
@@ -19,7 +19,7 @@
     "lib/*"
   ],
   "permissions": [
-    "tabs",
+    "storage",
     "activeTab"
   ]
 }

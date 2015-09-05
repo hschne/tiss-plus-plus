@@ -8,6 +8,8 @@ TODO:
 
 - Recent LVAs:
 	- On the "Lehrveranstaltungen" site below the search button show a table of recently visisted lvas.
+	- Save lva page in visited lvas list (on visit)
+	- Render last lvas in lva search list
 
 - Registration Reminder
 	- Add button to remind
