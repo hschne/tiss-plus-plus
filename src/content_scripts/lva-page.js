@@ -1,19 +1,25 @@
 function renderRoomButtons(){
 
+    const wegweiserBasePage = "http://www.wegweiser.ac.at";
+
+    const roomLink = "'/events/roomSchedule.xhtml'";
+
+    const buttonTemplate =  function(buttonLink) {
+        return '<a class=\"maplink\"href=\"'+buttonLink+ '\" ><div class=\'mapbutton\'></div></a>';
+    }
+
     function createButton(linkElement) {
         var currentRoom = linkElement.innerHTML;
-
-        var buttonHtml = "<div class='mapbutton'></div>";
 
         function renderButton(linkElement, buttonLink) {
             var parent = linkElement.parentElement;
             var parentContent = parent.innerHTML;
 
-            parent.innerHTML = parentContent +  '<a class=\"maplink\"href=\"'+buttonLink+ '\" >' +buttonHtml+ "</a>";
+            parent.innerHTML = parentContent + buttonTemplate(buttonLink);
         }
 
         function getRoomLinkAndRenderButton() {
-            var baseLink = "http://www.wegweiser.ac.at";
+            var baseLink = wegweiserBasePage;
             $.getJSON(chrome.extension.getURL('/resources/room-links.json'), function (json) {
                 var rooms = json;
                 $.each(rooms, function (index, room) {
@@ -28,7 +34,7 @@ function renderRoomButtons(){
         getRoomLinkAndRenderButton();
     }
 
-    var roomLinks =$("a[href*='/events/roomSchedule.xhtml']");
+    var roomLinks =$('a[href*='+roomLink+']');
     roomLinks.each(function () {
         var link = $(this);
         createButton(link.get(0));

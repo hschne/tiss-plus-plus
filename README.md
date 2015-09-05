@@ -1,6 +1,8 @@
 # TISS++
 
-A Google Chrome extension improving TISS
+A Google Chrome extension improving TISS.
 
-- asdfasd
-- dfasdf
+## Features:
+
+- Adds a button for displaying a map for certain rooms.
+
