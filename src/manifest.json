@@ -11,6 +11,9 @@
       "css": ["css/background.css"]
     }
   ],
+  "background": {
+    "scripts": ["scripts/visitedLvas.js","scripts/background.js"]
+  },
   "icons": {
     "128": "resources/logo.png"
   },
