@@ -1,0 +1,22 @@
+{
+  "name": "tiss-plus-plus",
+  "version": "1.0.0",
+  "description": "A Google Chrome extension improving TISS.",
+  "dependencies": {},
+  "devDependencies": {
+    "karma": "^0.13.9",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-qunit": "^0.1.5",
+    "phantomjs": "^1.9.18",
+    "qunitjs": "^1.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/hschroedl/tiss-plus-plus"
+  },
+  "author": "hschroedl",
+  "bugs": {
+    "url": "https://github.com/hschroedl/tiss-plus-plus/issues"
+  },
+  "homepage": "https://github.com/hschroedl/tiss-plus-plus"
+}
