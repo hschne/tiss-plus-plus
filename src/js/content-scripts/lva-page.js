@@ -6,7 +6,7 @@ function renderRoomButtons(){
 
     const buttonTemplate =  function(buttonLink) {
         return '<a class=\"maplink\"href=\"'+buttonLink+ '\" ><div class=\'mapbutton\'></div></a>';
-    }
+    };
 
     function createButton(linkElement) {
         var currentRoom = linkElement.innerHTML;

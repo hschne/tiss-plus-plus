@@ -10,16 +10,11 @@ LvaList.prototype.add = function (lva) {
     if (lvas.length > 10) {
         lvas.shift();
     }
-    else {
-        lvas.push(lva);
-    }
-}
+    lvas.push(lva);
+
+};
 
 
 LvaList.prototype.get = function () {
     return this.lvas;
-}
-
-
-
-
+};
