@@ -5,7 +5,7 @@ function Lva(name, number, semester, dateVisited, link) {
     this.name = name;
     this.number = number;
     this.semester = semester;
-    this.dateVisited = dateVisited;
+    this.date = dateVisited;
     this.link = link;
 }
 

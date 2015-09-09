@@ -25,7 +25,7 @@ QUnit.test('Add duplicate of lva', function (assert) {
 
     var newList = lvaList.get();
     assert.equal(newList.length, 1, "Lva updated");
-    assert.equal(newList[0].dateVisited, "anotherDate", "Date updated")
+    assert.equal(newList[0].date, "anotherDate", "Date updated")
 });
 
 QUnit.test("Add lva to full list", function (assert) {

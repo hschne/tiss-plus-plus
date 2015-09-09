@@ -11,7 +11,7 @@ LvaList.prototype.add = function (lva) {
     function duplicateUpdated() {
         for (var i = 0; i < lvas.length; i++) {
             if (lvas[i].equals(lva)) {
-                lvas[i].dateVisited = lva.dateVisited;
+                lvas[i].date = lva.date;
                 return true;
             }
         }
