@@ -26,7 +26,6 @@ LvaList.prototype.add = function (lva) {
     }
 };
 
-
 LvaList.prototype.get = function () {
     return this.lvas;
 };
