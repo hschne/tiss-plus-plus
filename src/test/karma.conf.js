@@ -22,10 +22,10 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-        '../js/content-scripts/*.js',
+        '../js/content-scripts/lva-search.js',
+        '../js/content-scripts/content-script.js',
         '../js/**/background.js'
     ],
-
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor

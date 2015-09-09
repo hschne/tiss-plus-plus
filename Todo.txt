@@ -3,7 +3,6 @@ TODO:
 - Update readme.md (with planned features and stuffs)
 
 - Room Maps:
-	- Write unit tests!
 	- Test manually that as many links as possible work (with Tiss)
 	- Show small popup of image (like reddit, if possible!)	
 
