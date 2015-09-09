@@ -1,5 +1,5 @@
 function LvaList(lvas) {
-    if (lvas == null) {
+    if ($.isEmptyObject(lvas) || lvas == null) {
         lvas = [];
     }
     this.lvas = lvas;

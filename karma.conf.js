@@ -21,7 +21,6 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-        'src/js/content-scripts/lva-search.js',
         'src/js/content-scripts/content-script.js',
         'src/js/background/background.js'
     ],

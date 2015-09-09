@@ -19,7 +19,7 @@ QUnit.test('Add lva to non-empty list', function (assert) {
 QUnit.test('Add duplicate of lva', function (assert) {
     var lvas = CreateExistingLvasStub(1);
     var lvaList = new LvaList(lvas);
-    var newLva = new Lva("existing0", "number0", "semester0", "anotherDate", "someLink")
+    var newLva = new Lva("existing0", "number0", "semester0","anotherDate", "someLink")
 
     lvaList.add(newLva);
 
@@ -43,12 +43,12 @@ QUnit.test("Add lva to full list", function (assert) {
 function CreateExistingLvasStub(count) {
     var lvas = [];
     for (var i = 0; i < count; i++) {
-        lvas.push(new Lva("existing" + i, "number" + i, "semester" + i, "somedate", "somelink"));
+        lvas.push(new Lva("existing" + i, "number" + i, "semester" + i, new Date().toJSON(), "somelink"));
     }
     return lvas;
 
 }
 function CreateDummyLvaStub() {
-    var newLva = new Lva("name", "number", "semester", "01.01.2015", "link");
+    var newLva = new Lva("name", "number", "semester", new Date().toJSON(), "link");
     return newLva;
 }

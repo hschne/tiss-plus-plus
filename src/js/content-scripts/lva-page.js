@@ -6,10 +6,10 @@ function LvaPage(location) {
     var pageLocation = location;
 
     function getTextWithoutChildren(element) {
-        return element.clone()    //clone the element
-            .children() //select all the children
-            .remove()   //remove all the children
-            .end()  //again go back to selected element
+        return element.clone()
+            .children()
+            .remove()
+            .end()
             .text();
 
     }
@@ -58,12 +58,14 @@ function LvaPage(location) {
         var name = getTextWithoutChildren(header);
         var subHeader = $contentInner.find('#subHeader').first();
         var semester = subHeader.text().split(',')[0];
-        var date = new Date();
+        var date = new Date().toJSON();
         return new Lva(name, number, semester, date, pageLocation)
     };
 }
 LvaPage.prototype.getJson = function (callback) {
-    $.getJSON(chrome.extension.getURL('/resources/room-links.json'), callback(json));
+    $.getJSON(chrome.extension.getURL('/resources/room-links.json'), function(data) {
+        callback(data)
+    });
 };
 
 LvaPage.prototype.roomLink = "'/events/roomSchedule.xhtml'";
