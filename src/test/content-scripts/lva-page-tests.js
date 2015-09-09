@@ -38,7 +38,7 @@ QUnit.test('Extract lva from page', function (assert) {
     assert.equal(lva.name, "LvaName", "Lva name extracted");
     assert.equal(lva.number, "184.685", "Lva number extracted");
     assert.equal(lva.semester, "2015W", "Lva semester extracted");
-    assert.equal(lva.link, "currentUrl", "Lva url extracted");
+    assert.equal(lva.url, "currentUrl", "Lva url extracted");
 });
 
 QUnit.done(function () {

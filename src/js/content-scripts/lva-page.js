@@ -3,7 +3,8 @@
  */
 function LvaPage(location) {
     var instance = this;
-    var pageLocation = location;
+
+    var url = location;
 
     function getTextWithoutChildren(element) {
         return element.clone()
@@ -54,12 +55,18 @@ function LvaPage(location) {
     this.getLva = function () {
         var $contentInner = $('#contentInner');
         var header = $contentInner.find('h1').first();
-        var number = header.find('span').first().text();
         var name = getTextWithoutChildren(header);
+        var number = header.find('span').first().text();
         var subHeader = $contentInner.find('#subHeader').first();
         var semester = subHeader.text().split(',')[0];
         var date = new Date().toJSON();
-        return new Lva(name, number, semester, date, pageLocation)
+        return {
+            name: name,
+            number: number,
+            semester: semester,
+            date: date,
+            url: url
+        };
     };
 }
 LvaPage.prototype.getJson = function (callback) {

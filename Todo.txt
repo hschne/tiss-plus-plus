@@ -7,8 +7,8 @@ TODO:
 	- Show small popup of image (like reddit, if possible!)	
 
 - Recent LVAs:
-	- need to implement storage
-	- implement sending current Url to background page
+	- Sanitize data from lvaPage (remove line breaks and shit)
+	- retrieve data from background page 
 	- Render last lvas in lva search list
 
 - Registration Reminder

@@ -5,21 +5,33 @@ function LvaList(lvas) {
     this.lvas = lvas;
 }
 
-LvaList.prototype.add = function (lva) {
+LvaList.prototype.add = function (oldLvas) {
     var lvas = this.lvas;
+
+    function lvasEqual(oldLva, newLva){
+        if (oldLva.name != newLva.name) {
+            return false
+        }
+        if (oldLva.number != newLva.number) {
+            return false;
+        }
+        return oldLva.semester == newLva.semester;
+    }
 
     function duplicateUpdated() {
         for (var i = 0; i < lvas.length; i++) {
-            if (lvas[i].equals(lva)) {
-                lvas[i].date = lva.date;
+            var oldLva = lvas[i];
+            if (lvasEqual(oldLva, oldLvas)) {
+                lvas[i].date = oldLvas.date;
                 return true;
             }
         }
         return false;
     }
 
+
     if (!duplicateUpdated()) {
-        lvas.push(lva);
+        lvas.push(oldLvas);
         if (lvas.length > 10) {
             lvas.shift();
         }
