@@ -16,8 +16,6 @@ Lva.prototype.equals = function (lva) {
     if (lva.number != this.number) {
         return false;
     }
-    if (lva.semester != this.semester) {
-        return false;
-    }
-    return true;
-}
+    return lva.semester == this.semester;
+
+};

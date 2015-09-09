@@ -2,9 +2,8 @@
  * Created by hasch on 09.09.2015.
  */
 function LvaPage(location) {
-
     var instance = this;
-    var location = location;
+    var pageLocation = location;
 
     function getTextWithoutChildren(element) {
         return element.clone()    //clone the element
@@ -34,15 +33,14 @@ function LvaPage(location) {
             function getRoomLinkAndRenderButton() {
                 var baseLink = wegweiserBasePage;
                 instance.getJson(function (json) {
-                    var rooms = json;
-                    $.each(rooms, function (index, room) {
+                    $.each(json, function (index, room) {
                         if (room.name.indexOf(currentRoom) > -1) {
                             var link = baseLink + room.link;
                             renderButton(linkElement, link)
                         }
                     });
                 });
-            };
+            }
             getRoomLinkAndRenderButton();
         }
 
@@ -54,17 +52,16 @@ function LvaPage(location) {
     };
 
     this.getLva = function () {
-        var header = $('#contentInner h1').first();
+        var $contentInner = $('#contentInner');
+        var header = $contentInner.find('h1').first();
         var number = header.find('span').first().text();
-        //
         var name = getTextWithoutChildren(header);
-        var subHeader = $('#contentInner #subHeader').first();
+        var subHeader = $contentInner.find('#subHeader').first();
         var semester = subHeader.text().split(',')[0];
         var date = new Date();
-        return new Lva(name, number, semester, date, location)
-    }
-};
-
+        return new Lva(name, number, semester, date, pageLocation)
+    };
+}
 LvaPage.prototype.getJson = function (callback) {
     $.getJSON(chrome.extension.getURL('/resources/room-links.json'), callback(json));
 };
