@@ -8,9 +8,9 @@ function LvaList(lvas) {
 LvaList.prototype.add = function (lva) {
     var lvas = this.lvas;
 
-    function duplicateUpdated(){
-        for(var i = 0; i< lvas.length; i++){
-            if(lvas[i].equals(lva)){
+    function duplicateUpdated() {
+        for (var i = 0; i < lvas.length; i++) {
+            if (lvas[i].equals(lva)) {
                 lvas[i].dateVisited = lva.dateVisited;
                 return true;
             }
@@ -18,7 +18,7 @@ LvaList.prototype.add = function (lva) {
         return false;
     }
 
-    if(!duplicateUpdated()){
+    if (!duplicateUpdated()) {
         lvas.push(lva);
         if (lvas.length > 10) {
             lvas.shift();

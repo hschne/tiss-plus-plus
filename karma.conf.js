@@ -15,16 +15,15 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '../../lib/jquery-2.1.4.min.js',
-      '../js/**/*.js',
-      '../**/*.js'
+      'lib/jquery-2.1.4.min.js',
+      'src/**/*.js'
     ],
 
     // list of files to exclude
     exclude: [
-        '../js/content-scripts/lva-search.js',
-        '../js/content-scripts/content-script.js',
-        '../js/**/background.js'
+        'src/js/content-scripts/lva-search.js',
+        'src/js/content-scripts/content-script.js',
+        'src/js/background/background.js'
     ],
 
     // preprocess matching files before serving them to the browser

@@ -1,4 +1,3 @@
-
 QUnit.module("Lva page tests");
 QUnit.begin(function () {
     $('body').append('<div id="qunit-fixture"></div>');

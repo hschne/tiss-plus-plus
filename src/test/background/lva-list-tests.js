@@ -42,8 +42,8 @@ QUnit.test("Add lva to full list", function (assert) {
 
 function CreateExistingLvasStub(count) {
     var lvas = [];
-    for (var i = 0; i < count; i++){
-        lvas.push(new Lva("existing"+i, "number"+i, "semester"+i, "somedate", "somelink"));
+    for (var i = 0; i < count; i++) {
+        lvas.push(new Lva("existing" + i, "number" + i, "semester" + i, "somedate", "somelink"));
     }
     return lvas;
 
