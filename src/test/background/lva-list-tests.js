@@ -19,13 +19,19 @@ QUnit.test('Add lva to non-empty list', function (assert) {
 QUnit.test('Add duplicate of lva', function (assert) {
     var lvas = CreateExistingLvasStub(1);
     var lvaList = new LvaList(lvas);
-    var newLva = new Lva("existing0", "number0", "semester0","anotherDate", "someLink")
+    var newLva = {
+        name: "existing0",
+        number: "number0",
+        semester: "semester0",
+        date: new Date().toJSON(),
+        url: "somelink"
+    };
 
     lvaList.add(newLva);
 
     var newList = lvaList.get();
     assert.equal(newList.length, 1, "Lva updated");
-    assert.equal(newList[0].date, "anotherDate", "Date updated")
+    assert.notEqual(newList[0].date, "anotherDate", "Date updated")
 });
 
 QUnit.test("Add lva to full list", function (assert) {
@@ -43,12 +49,25 @@ QUnit.test("Add lva to full list", function (assert) {
 function CreateExistingLvasStub(count) {
     var lvas = [];
     for (var i = 0; i < count; i++) {
-        lvas.push(new Lva("existing" + i, "number" + i, "semester" + i, new Date().toJSON(), "somelink"));
+        lvas.push(
+            {
+                name: "existing" + i,
+                number: "number" + i,
+                semester: "semester" + i,
+                date: new Date().toJSON(),
+                url: "somelink"
+            });
     }
     return lvas;
 
 }
 function CreateDummyLvaStub() {
-    var newLva = new Lva("name", "number", "semester", new Date().toJSON(), "link");
+    var newLva = {
+        name: "name",
+        number: "number",
+        semester: "semester",
+        date: new Date().toJSON(),
+        url: "somelink"
+    };
     return newLva;
 }

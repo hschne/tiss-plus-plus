@@ -7,12 +7,17 @@ function LvaPage(location) {
     var url = location;
 
     function getTextWithoutChildren(element) {
-        return element.clone()
+        var innerText = element.clone()
             .children()
             .remove()
             .end()
-            .text();
+            .text()
+        return innerText;
 
+    }
+
+    function sanitizeText(text){
+        return text.replace(/(\r\n|\n|\r)/gm,"").trim();
     }
 
     this.displayRoomMaps = function () {
@@ -55,10 +60,10 @@ function LvaPage(location) {
     this.getLva = function () {
         var $contentInner = $('#contentInner');
         var header = $contentInner.find('h1').first();
-        var name = getTextWithoutChildren(header);
-        var number = header.find('span').first().text();
         var subHeader = $contentInner.find('#subHeader').first();
-        var semester = subHeader.text().split(',')[0];
+        var name = sanitizeText(getTextWithoutChildren(header));
+        var number = sanitizeText(header.find('span').first().text());
+        var semester = sanitizeText(subHeader.text().split(',')[0]);
         var date = new Date().toJSON();
         return {
             name: name,
