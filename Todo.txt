@@ -9,9 +9,10 @@ TODO:
 	- Show small popup of image (like reddit, if possible!)	
 
 - Recent LVAs:
-	- retrieve data from background page 
-	- Render last lvas in lva search list
-
+	- Introduce templating for injected html content (possibly render that stuff in background script)
+	- Sort content by date
+	- Improve look of table (css magics!)
+	
 - Registration Reminder
 	- Add button to remind
 	- Imlement google calendar login & writing new event 
