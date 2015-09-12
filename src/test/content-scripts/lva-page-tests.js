@@ -22,7 +22,7 @@ QUnit.test('Add room button to link', function (assert) {
     lvaPage.displayRoomMaps();
     setTimeout(function () {
         assert.equal($('#linkContainer').children().length, 2, "Another link was inserted");
-        assert.equal($('.maplink').get(0).getAttribute('href'), "http://www.wegweiser.ac.at/someLink");
+        assert.equal($('.map-button').get(0).getAttribute('href'), "http://www.wegweiser.ac.at/someLink");
         done();
     });
 });
