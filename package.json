@@ -4,12 +4,13 @@
   "description": "A Google Chrome extension improving TISS.",
   "dependencies": {},
   "devDependencies": {
+    "bower": "^1.5.2",
     "karma": "^0.13.9",
+    "karma-chrome-launcher": "~0.2.0",
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-qunit": "^0.1.5",
     "phantomjs": "^1.9.18",
-    "qunitjs": "^1.19.0",
-    "karma-chrome-launcher": "~0.2.0"
+    "qunitjs": "^1.19.0"
   },
   "repository": {
     "type": "git",
