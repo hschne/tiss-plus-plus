@@ -23,7 +23,7 @@ function LvaPage(location) {
         var wegweiserBasePage = "http://www.wegweiser.ac.at";
 
         var buttonTemplate = function (buttonLink) {
-            return '<a class=\"maplink"href=\"' + buttonLink + '"><div class=\'mapbutton\'></div></a>';
+            return '<a class=\"map-button"href=\"' + buttonLink + '"><div class=\'mapbutton\'></div></a>';
         };
 
         function createButton(linkElement) {
@@ -73,9 +73,10 @@ function LvaPage(location) {
         };
     };
 }
-LvaPage.prototype.getJson = function (callback) {
-    $.getJSON(chrome.extension.getURL('/resources/room-links.json'), function(data) {
-        callback(data)
+LvaPage.prototype.getJson = function (cb) {
+    var url = chrome.extension.getURL('resources/room-links.json');
+    $.getJSON(url, function(data){
+        cb(data);
     });
 };
 
