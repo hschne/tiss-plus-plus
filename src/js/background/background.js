@@ -10,9 +10,10 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
                 chrome.storage.sync.set({"lvalist": lvaList.get()});
             });
         }
-        else if (request.action == "GetLvaList") {
+        else if (request.action == "GetLvaTable") {
             chrome.storage.sync.get("lvalist", function (val) {
-                sendResponse(val);
+                var renderService = new RenderService(chrome.runtime);
+                renderService.renderRecentLvas(val.lvalist, sendResponse)
             });
         }
     }

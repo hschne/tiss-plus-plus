@@ -7,12 +7,11 @@ function LvaPage(location) {
     var url = location;
 
     function getTextWithoutChildren(element) {
-        var innerText = element.clone()
+        return element.clone()
             .children()
             .remove()
             .end()
-            .text()
-        return innerText;
+            .text();
 
     }
 

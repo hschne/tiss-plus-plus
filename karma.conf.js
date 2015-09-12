@@ -16,6 +16,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'lib/jquery/dist/jquery.js',
+      'lib/sinonjs/sinon.js',
+      'lib/mustache.js/mustache.js',
       'src/**/*.js'
     ],
 
@@ -28,6 +30,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'src/js/**/*.js': ['coverage']
     },
 
 

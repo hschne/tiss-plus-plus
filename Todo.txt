@@ -5,12 +5,14 @@ TODO:
 - Create some thing resembling a build process
 
 - Room Maps:
+	- Rename lva to "Course"
 	- Test manually that as many links as possible work (with Tiss)
 	- Show small popup of image (like reddit, if possible!)	
 
 - Recent LVAs:
-	- Introduce templating for injected html content (possibly render that stuff in background script)
+	- Make sure only displayed if no search active
 	- Sort content by date
+	- Unify tests (using sinon & mocking chrome, maybe even for background page and content script)
 	- Improve look of table (css magics!)
 	
 - Registration Reminder

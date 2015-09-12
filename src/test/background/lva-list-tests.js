@@ -1,4 +1,4 @@
-QUnit.module("Recently visited LVAs tests")
+QUnit.module("Lva list tests")
 QUnit.test('Add lva to empty list', function (assert) {
     var newLva = CreateDummyLvaStub();
     var lvaList = new LvaList();
@@ -7,7 +7,7 @@ QUnit.test('Add lva to empty list', function (assert) {
     assert.equal(lvaList.get().length, 1, "Lva added to empty list");
 });
 
-QUnit.test('Add lva to non-empty list', function (assert) {
+QUnit.test('Add new lva to non-empty list', function (assert) {
     var lvas = CreateExistingLvasStub(1);
     var lvaList = new LvaList(lvas);
 

@@ -12,7 +12,7 @@
     }
   ],
   "background": {
-    "scripts": ["lib/jquery/dist/jquery.js", "src/js/background/background.js", "src/js/background/lva-list.js"]
+    "scripts": ["lib/jquery/dist/jquery.js", "lib/mustache.js/mustache.js", "src/js/background/background.js", "src/js/background/lva-list.js","src/js/background/render-service.js" ]
   },
   "icons": {
     "128": "resources/logo.png"

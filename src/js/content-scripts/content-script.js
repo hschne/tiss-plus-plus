@@ -3,23 +3,24 @@
  */
 var pageUrl = location.href;
 
-var lvaPageUrl = "course/educationDetails.xhtml";
+var registeredLva = "course/educationDetails.xhtml";
+var newLvaUrl = "/course/courseDetails.xhtml";
 var lvaSearchPageUrl = "/course/courseList.xhtml";
 
 
-if(pageUrl.indexOf(lvaPageUrl) > -1){
+if (pageUrl.indexOf(registeredLva) > -1 || pageUrl.indexOf(newLvaUrl) > -1) {
     var lvaPage = new LvaPage(pageUrl);
     lvaPage.displayRoomMaps();
     chrome.runtime.sendMessage({
         action: 'UpdateLvaList',
         data: lvaPage.getLva()
     });
-};
+}
 
-if(pageUrl.indexOf(lvaSearchPageUrl) > -1){
-    chrome.runtime.sendMessage({action: "GetLvaList"}, function(response) {
+if (pageUrl.indexOf(lvaSearchPageUrl) > -1) {
+    chrome.runtime.sendMessage({action: "GetLvaTable"}, function (lvaTable) {
         var lvaSearchPage = new LvaSearchPage();
-        lvaSearchPage.displayRecentlyVisitedLvas(response.lvalist);
+        lvaSearchPage.displayRecentlyVisitedLvas(lvaTable);
     });
 }
 
