@@ -1,10 +1,10 @@
 /**
  * Created by hasch on 10.09.2015.
- */
-function LvaSearchPage(){
+        */
+        function LvaSearchPage(){
 
-    this.displayRecentlyVisitedLvas = function (lvaList) {
-        function renderTable(lvaList) {
+            this.displayRecentlyVisitedLvas = function (lvaList) {
+                function renderTable(lvaList) {
             var contentInner = $('#contentInner').get(0);
             var existingContent = contentInner.innerHTML;
 

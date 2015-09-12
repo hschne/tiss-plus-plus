@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <th>Nummer</th>
+        <th>Titel</th>
+        <th>Semester</th>
+        <th>Datum</th>
+    </tr>
+    {{#lvas}}
+        <tr>
+            <td>{{number}}</td>
+            <td><a href="{{url}}">{{name}}</a></td>
+            <td>{{semester}}</td>
+            <td>{{date}}</td>
+        </tr>
+    {{/lvas}}
+</table>

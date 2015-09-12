@@ -1,4 +1,4 @@
-.mapbutton {
+.map-button {
     margin-left: 5px;
     margin-top: 5px;
     width: 0;
@@ -10,9 +10,9 @@
     display: inline-block;
 }
 
-.maplink:link,
-.maplink:visited,
-.maplink:hover,
-.maplink:active{
+.map-link:link,
+.map-link:visited,
+.map-link:hover,
+.map-link:active{
     text-decoration: none;
 }
