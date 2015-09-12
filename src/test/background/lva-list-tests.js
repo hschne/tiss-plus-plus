@@ -44,7 +44,7 @@ QUnit.test("Add lva to full list", function (assert) {
     var newList = lvaList.get();
     assert.equal(newList.length, 10, "Length is still 10");
     assert.equal(newList[0].name, "existing1", "Oldest item was removed")
-})
+});
 
 function CreateExistingLvasStub(count) {
     var lvas = [];
