@@ -1,16 +1,30 @@
-<table>
-    <tr>
-        <th>Nummer</th>
-        <th>Titel</th>
-        <th>Semester</th>
-        <th>Datum</th>
-    </tr>
-    {{#lvas}}
-        <tr>
-            <td>{{number}}</td>
-            <td><a href="{{url}}">{{name}}</a></td>
-            <td>{{semester}}</td>
-            <td>{{date}}</td>
-        </tr>
-    {{/lvas}}
-</table>
+<legend>Letzte besuchte Lehrverstaltungen </legend>
+
+<div class="ui-datatable ui-widget">
+    <div class="ui-datatable-tablewrapper">
+        <table>
+            <thead>
+            <tr>
+                <th class="ui-sortable-column ui-state-default"><span class="ui-column-title">Nummer</span>
+                    <span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+                <th class="ui-sortable-column ui-state-default"><span class="ui-column-title">Titel</span>
+                    <span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+                <th class="ui-sortable-column ui-state-default"><span class="ui-column-title">Semester</span>
+                    <span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+                <th class="ui-sortable-column ui-state-default"><span class="ui-column-title">Datum</span>
+                    <span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+            </tr>
+            </thead>
+            <tbody class="ui-datatable-data ui-widget-content">
+            {{#lvas}}
+                <tr class="ui-widget-content">
+                    <td role="gridcell">{{number}}</td>
+                    <td role="gridcell"><a href="{{url}}">{{name}}</a></td>
+                    <td role="gridcell">{{semester}}</td>
+                    <td role="gridcell">{{date}}</td>
+                </tr>
+            {{/lvas}}
+            </tbody>
+        </table>
+    </div>
+</div>

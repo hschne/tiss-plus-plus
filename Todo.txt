@@ -13,7 +13,6 @@ TODO:
 	- Make sure only displayed if no search active
 	- Sort content by date
 	- Unify tests (using sinon & mocking chrome, maybe even for background page and content script)
-	- Improve look of table (css magics!)
 	
 - Registration Reminder
 	- Add button to remind
