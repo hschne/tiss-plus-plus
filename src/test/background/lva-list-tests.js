@@ -49,12 +49,13 @@ QUnit.test("Add lva to full list", function (assert) {
 function CreateExistingLvasStub(count) {
     var lvas = [];
     for (var i = 0; i < count; i++) {
+        //Create lvas with ascending date
         lvas.push(
             {
                 name: "existing" + i,
                 number: "number" + i,
                 semester: "semester" + i,
-                date: new Date().toJSON(),
+                date: new Date(i+"/01/2010").toJSON(),
                 url: "somelink"
             });
     }
@@ -66,7 +67,7 @@ function CreateDummyLvaStub() {
         name: "name",
         number: "number",
         semester: "semester",
-        date: new Date().toJSON(),
+        date: new Date("01/01/2100").toJSON(),
         url: "somelink"
     };
     return newLva;

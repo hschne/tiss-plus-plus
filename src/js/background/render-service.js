@@ -32,8 +32,10 @@ function RenderService(chrome) {
         var actualDate = new Date(date);
         var day = actualDate.getDate(),
             month = actualDate.getMonth() + 1,
-            year = actualDate.getFullYear();
-        return day +"." +month+"."+year;
+            year = actualDate.getFullYear(),
+            hours = actualDate.getHours(),
+            minutes = actualDate.getMinutes();
+        return day +"." +month+"."+year + " "+hours+":"+minutes;
     }
 
     instance.renderRecentLvas = function (lvaList, callback) {

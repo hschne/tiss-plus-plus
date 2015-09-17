@@ -16,7 +16,8 @@ function LvaSearchPage() {
             var contentInner = $('#contentInner').get(0);
             var existingContent = contentInner.innerHTML;
             contentInner.innerHTML = existingContent + table;
-            $("#recent-lva-table").tablesorter({sortList: [[3,0], [0,0]]} );
+            //Activate sorting by date and sort ascending
+            $("#recent-lva-table").tablesorter({sortList: [[3,1]]} );
         }
     }
 }

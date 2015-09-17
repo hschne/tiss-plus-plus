@@ -29,13 +29,19 @@ LvaList.prototype.add = function (oldLvas) {
         return false;
     }
 
-
     if (!duplicateUpdated()) {
         lvas.push(oldLvas);
+        lvas.sort(function(a,b){
+                var date1 = new Date(a.date);
+                var date2 = new Date(b.date);
+                return date1 - date2;
+            });
         if (lvas.length > 10) {
             lvas.shift();
         }
     }
+
+
 };
 
 LvaList.prototype.get = function () {
