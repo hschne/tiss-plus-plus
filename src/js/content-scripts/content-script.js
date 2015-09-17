@@ -6,12 +6,12 @@ var pageUrl = location.href;
 var favouriteCourseUrl = "course/educationDetails.xhtml";
 var newCourseUrl = "/course/courseDetails.xhtml";
 var courseSearchPageUrl = "/course/courseList.xhtml";
+var courseRegistrationUrl ="/course/courseRegistration.xhtml";
 
 
 if (pageUrl.indexOf(favouriteCourseUrl) > -1 || pageUrl.indexOf(newCourseUrl) > -1) {
     var coursePage = new CoursePage(pageUrl);
     coursePage.displayRoomMaps();
-    var course = coursePage.getCourse();
     chrome.runtime.sendMessage({
         action: 'UpdateCourseList',
         data: coursePage.getCourse()
@@ -25,5 +25,8 @@ if (pageUrl.indexOf(courseSearchPageUrl) > -1) {
     });
 }
 
+if(pageUrl.indexOf(courseRegistrationUrl) > -1){
+    console.log("Hello there!")
+}
 
 

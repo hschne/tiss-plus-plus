@@ -6,9 +6,6 @@ TODO:
 
 - Room Maps:
 	- Test manually that as many links as possible work (with Tiss)
-
-- Recent LVAs:
-	- Also properly add item even if opened in new tab (not active tab)
 	
 - Registration Reminder
 	- Add button to remind
@@ -19,6 +16,7 @@ TODO:
 /////////////////// NO MORE FEATURES FOR 0.1 //////////////////////////
 
 - Room Maps: 
+	- Make sure items are rendered in background page
 	- Show small popup of image (like reddit, if possible!)	
 
 - Recent LVAs:

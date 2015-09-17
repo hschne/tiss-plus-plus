@@ -3,7 +3,11 @@
  */
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request) {
-        if (request.action == "UpdateCourseList") {
+        if(request.action = "GetMapButton"){
+            var renderService = new RenderService(chrome.runtime);
+            renderService.renderMapButton(request.data, sendResponse)
+        }
+        else if (request.action == "UpdateCourseList") {
             chrome.storage.sync.get("courseList", function (val) {
                 var courseList = new CourseList(val.courseList);
                 courseList.add(request.data);
@@ -16,6 +20,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
                 renderService.renderRecentCourses(val.courseList, sendResponse)
             });
         }
+
     }
     return true;
 });
