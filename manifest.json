@@ -7,7 +7,11 @@
   "content_scripts": [
     {
       "matches": [ "https://tiss.tuwien.ac.at/*" ],
-      "js": ["lib/jquery/dist/jquery.js", "lib/tablesorter/jquery.tablesorter.js" ,"src/js/content-scripts/course-page.js", "src/js/content-scripts/course-search-page.js", "src/js/content-scripts/content-script.js" ],
+      "js": [
+        "lib/jquery/dist/jquery.js", "lib/tablesorter/jquery.tablesorter.js" ,"src/js/content-scripts/course-page.js",
+        "src/js/content-scripts/course-search-page.js", "src/js/content-scripts/course-registration-page.js",
+        "src/js/content-scripts/content-script.js"
+      ],
       "css": ["css/background.css"]
     }
   ],

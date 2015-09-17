@@ -60,7 +60,9 @@ QUnit.test("Render lva table", function (assert) {
     var done = assert.async();
 
     var renderService = new RenderService(chromeApiMock);
-    renderService.renderRecentCourses(["1","2"], callback);
+    var string = new Date().toJSON();
+    var dummyLva = { name: "Name", date: string};
+    renderService.renderRecentCourses([dummyLva], callback);
     this.requests[0].respond(200, {'Content-Type': 'text/plain'}, 'Content');
 
     mock.verify()

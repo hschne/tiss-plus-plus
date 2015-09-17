@@ -29,14 +29,15 @@ function RenderService(chrome) {
     }
 
     function formatSingleDate(date) {
-        var hours = date.getHours();
-        var minutes = date.getMinutes();
+        var actualDate = new Date(date);
+        var hours = actualDate.getHours();
+        var minutes = actualDate.getMinutes();
         var ampm = hours >= 12 ? 'pm' : 'am';
         hours = hours % 12;
         hours = hours ? hours : 12;
         minutes = minutes < 10 ? '0'+minutes : minutes;
         var strTime = hours + ':' + minutes + ' ' + ampm;
-        return date.getMonth()+1 + "." + date.getDate() + "." + date.getFullYear() + "  " + strTime;
+        return actualDate.getMonth()+1 + "." + actualDate.getDate() + "." + actualDate.getFullYear() + "  " + strTime;
     }
 
     instance.renderRecentCourses = function (courseList, callback) {

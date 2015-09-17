@@ -3,7 +3,7 @@
  */
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request) {
-        if(request.action = "GetMapButton"){
+        if(request.action == "GetMapButton"){
             var renderService = new RenderService(chrome.runtime);
             renderService.renderMapButton(request.data, sendResponse)
         }

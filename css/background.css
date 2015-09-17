@@ -16,3 +16,12 @@
 .map-link:active{
     text-decoration: none;
 }
+
+#reminder-button {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-top: -2px;
+    margin-left: 20px;
+    background: url('chrome-extension://__MSG_@@extension_id__/resources/reminder-16.png') no-repeat;
+}
