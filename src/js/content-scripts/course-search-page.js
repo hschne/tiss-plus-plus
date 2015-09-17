@@ -1,9 +1,9 @@
 /**
  * Created by hasch on 10.09.2015.
  */
-function LvaSearchPage() {
+function CourseSearchPage() {
 
-    this.displayRecentlyVisitedLvas = function (table) {
+    this.displayRecentlyVisitedCourses = function (table) {
         /**
          * @return {boolean}
          */
@@ -17,7 +17,7 @@ function LvaSearchPage() {
             var existingContent = contentInner.innerHTML;
             contentInner.innerHTML = existingContent + table;
             //Activate sorting by date and sort ascending
-            $("#recent-lva-table").tablesorter({sortList: [[3,1]]} );
+            $("#recent-course-table").tablesorter({sortList: [[3,1]]} );
         }
     }
 }

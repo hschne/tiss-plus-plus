@@ -1,7 +1,7 @@
 /**
  * Created by hasch on 09.09.2015.
  */
-function LvaPage(location) {
+function CoursePage(location) {
     var instance = this;
 
     var url = location;
@@ -56,7 +56,7 @@ function LvaPage(location) {
         });
     };
 
-    this.getLva = function () {
+    this.getCourse = function () {
         var $contentInner = $('#contentInner');
         var header = $contentInner.find('h1').first();
         var subHeader = $contentInner.find('#subHeader').first();
@@ -64,21 +64,27 @@ function LvaPage(location) {
         var number = sanitizeText(header.find('span').first().text());
         var semester = sanitizeText(subHeader.text().split(',')[0]);
         var date = new Date().toJSON();
-        return {
-            name: name,
-            number: number,
-            semester: semester,
-            date: date,
-            url: url
-        };
+        //Only return if page could be loaded properly
+        if(name != "" && number != "" && semester != ""){
+            return {
+                name: name,
+                number: number,
+                semester: semester,
+                date: date,
+                url: url
+            };
+        }
+        throw "The current page does not contain any course information. Please reload."
+
+
     };
 }
-LvaPage.prototype.getJson = function (cb) {
+CoursePage.prototype.getJson = function (cb) {
     var url = chrome.extension.getURL('resources/room-links.json');
     $.getJSON(url, function(data){
         cb(data);
     });
 };
 
-LvaPage.prototype.roomLink = "'/events/roomSchedule.xhtml'";
+CoursePage.prototype.roomLink = "'/events/roomSchedule.xhtml'";
 

@@ -20,27 +20,28 @@ function RenderService(chrome) {
         req.send(null);
     }
 
-    function formatDate(lvaList){
-        for(var i= 0; i<lvaList.length; i++ ){
-            var lva = lvaList[i];
-            lva.date = formatSingleDate(lva.date);
+    function formatDate(courseList){
+        for(var i= 0; i<courseList.length; i++ ){
+            var course = courseList[i];
+            course.date = formatSingleDate(course.date);
         }
-        return lvaList;
+        return courseList;
     }
 
-    function formatSingleDate(date){
-        var actualDate = new Date(date);
-        var day = actualDate.getDate(),
-            month = actualDate.getMonth() + 1,
-            year = actualDate.getFullYear(),
-            hours = actualDate.getHours(),
-            minutes = actualDate.getMinutes();
-        return day +"." +month+"."+year + " "+hours+":"+minutes;
+    function formatSingleDate(date) {
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+        return date.getMonth()+1 + "." + date.getDate() + "." + date.getFullYear() + "  " + strTime;
     }
 
-    instance.renderRecentLvas = function (lvaList, callback) {
-        getTemplate("visited-lvas.mustache", function (template) {
-            var rendered = Mustache.render(template, {lvas: formatDate(lvaList)});
+    instance.renderRecentCourses = function (courseList, callback) {
+        getTemplate("visited-courses.mustache", function (template) {
+            var rendered = Mustache.render(template, {courses: formatDate(courseList)});
             callback(rendered);
         })
     };

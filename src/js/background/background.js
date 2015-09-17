@@ -3,17 +3,17 @@
  */
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request) {
-        if (request.action == "UpdateLvaList") {
-            chrome.storage.sync.get("lvalist", function (val) {
-                var lvaList = new LvaList(val.lvalist);
-                lvaList.add(request.data);
-                chrome.storage.sync.set({"lvalist": lvaList.get()});
+        if (request.action == "UpdateCourseList") {
+            chrome.storage.sync.get("courseList", function (val) {
+                var courseList = new CourseList(val.courseList);
+                courseList.add(request.data);
+                chrome.storage.sync.set({"courseList": courseList.get()});
             });
         }
-        else if (request.action == "GetLvaTable") {
-            chrome.storage.sync.get("lvalist", function (val) {
+        else if (request.action == "GetRecentCourseTable") {
+            chrome.storage.sync.get("courseList", function (val) {
                 var renderService = new RenderService(chrome.runtime);
-                renderService.renderRecentLvas(val.lvalist, sendResponse)
+                renderService.renderRecentCourses(val.courseList, sendResponse)
             });
         }
     }

@@ -45,7 +45,7 @@ QUnit.test("Render lva table", function (assert) {
             }
         },
         mock = sinon.mock(chromeApiMock);
-    mock.expects("getURL").once().withExactArgs("../../templates/visited-lvas.mustache");
+    mock.expects("getURL").once().withExactArgs("../../templates/visited-courses.mustache");
     // Fake XMLHttpRequest
     this.xhr = sinon.useFakeXMLHttpRequest();
     var requests = this.requests = [];
@@ -60,7 +60,7 @@ QUnit.test("Render lva table", function (assert) {
     var done = assert.async();
 
     var renderService = new RenderService(chromeApiMock);
-    renderService.renderRecentLvas(["1","2"], callback);
+    renderService.renderRecentCourses(["1","2"], callback);
     this.requests[0].respond(200, {'Content-Type': 'text/plain'}, 'Content');
 
     mock.verify()

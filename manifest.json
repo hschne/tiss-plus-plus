@@ -7,12 +7,12 @@
   "content_scripts": [
     {
       "matches": [ "https://tiss.tuwien.ac.at/*" ],
-      "js": ["lib/jquery/dist/jquery.js", "lib/tablesorter/jquery.tablesorter.js" ,"src/js/content-scripts/lva-page.js", "src/js/content-scripts/lva-search-page.js", "src/js/content-scripts/content-script.js" ],
+      "js": ["lib/jquery/dist/jquery.js", "lib/tablesorter/jquery.tablesorter.js" ,"src/js/content-scripts/course-page.js", "src/js/content-scripts/course-search-page.js", "src/js/content-scripts/content-script.js" ],
       "css": ["css/background.css"]
     }
   ],
   "background": {
-    "scripts": ["lib/jquery/dist/jquery.js", "lib/mustache.js/mustache.js", "src/js/background/background.js", "src/js/background/lva-list.js","src/js/background/render-service.js" ]
+    "scripts": ["lib/jquery/dist/jquery.js", "lib/mustache.js/mustache.js", "src/js/background/background.js", "src/js/background/course-list.js","src/js/background/render-service.js" ]
   },
   "icons": {
     "128": "resources/logo.png"

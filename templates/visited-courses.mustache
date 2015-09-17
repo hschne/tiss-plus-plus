@@ -2,7 +2,7 @@
 
 <div class="ui-datatable ui-widget">
     <div class="ui-datatable-tablewrapper">
-        <table id="recent-lva-table">
+        <table id="recent-course-table">
             <thead>
             <tr>
                 <th class="ui-sortable-column ui-state-default"><span class="ui-column-title">Nummer</span>
@@ -16,14 +16,14 @@
             </tr>
             </thead>
             <tbody class="ui-datatable-data ui-widget-content">
-            {{#lvas}}
+            {{#courses}}
                 <tr class="ui-widget-content">
                     <td role="gridcell">{{number}}</td>
                     <td role="gridcell"><a href="{{url}}">{{name}}</a></td>
                     <td role="gridcell">{{semester}}</td>
                     <td role="gridcell">{{date}}</td>
                 </tr>
-            {{/lvas}}
+            {{/courses}}
             </tbody>
         </table>
     </div>

@@ -5,12 +5,10 @@ TODO:
 - Create some thing resembling a build process
 
 - Room Maps:
-	- Rename lva to "Course"
 	- Test manually that as many links as possible work (with Tiss)
 
 - Recent LVAs:
-	- Make date pretty (and make sure sort still works!)
-	- Unify tests (using sinon & mocking chrome, maybe even for background page and content script)
+	- Also properly add item even if opened in new tab (not active tab)
 	
 - Registration Reminder
 	- Add button to remind
@@ -25,5 +23,5 @@ TODO:
 
 - Recent LVAs:
 	- Make sure arrows in header change once sorting is activated
-	
+
 	
