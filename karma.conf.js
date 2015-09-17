@@ -18,6 +18,7 @@ module.exports = function(config) {
       'lib/jquery/dist/jquery.js',
       'lib/sinonjs/sinon.js',
       'lib/mustache.js/mustache.js',
+      'lib/tablesorter/jquery.tablesorter.js',
       'src/**/*.js'
     ],
 

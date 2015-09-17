@@ -22,3 +22,8 @@ TODO:
 
 - Room Maps: 
 	- Show small popup of image (like reddit, if possible!)	
+
+- Recent LVAs:
+	- Make sure arrows in header change once sorting is activated
+	
+	
