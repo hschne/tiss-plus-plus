@@ -7,7 +7,6 @@ TODO:
 - Room Maps:
 	- Rename lva to "Course"
 	- Test manually that as many links as possible work (with Tiss)
-	- Show small popup of image (like reddit, if possible!)	
 
 - Recent LVAs:
 	- Make sure only displayed if no search active
@@ -21,3 +20,6 @@ TODO:
 - "Remove from favourites" shortcut
 
 /////////////////// NO MORE FEATURES FOR 0.1 //////////////////////////
+
+- Room Maps: 
+	- Show small popup of image (like reddit, if possible!)	
