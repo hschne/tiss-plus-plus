@@ -17,8 +17,18 @@ function CourseRegistrationPage(chromeApi){
         })
     };
 
+    function parseRegistrationBegin(){
+        var registrationBegin = $("#registrationForm\\:begin").text();
+        //text is of form 01.01.2015, 12:00
+        var datePart = registrationBegin.split(',')[0].trim();
+        var timePart = registrationBegin.split(',')[1].trim();
+        return { date: datePart, time: timePart};
+    }
+
     instance.setReminder = function(){
-        console.log("Reminder set");
+        var lvaInformation = parseLvaInformation();
+        var parsedDate = parseRegistrationBegin();
+        console.log("Reminder set for " +parsedDate.date +" "+ parsedDate.time );
     }
 
 }

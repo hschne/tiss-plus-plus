@@ -8,8 +8,8 @@ TODO:
 	- Test manually that as many links as possible work (with Tiss)
 	
 - Registration Reminder
-	- Add button to remind
-	- Imlement google calendar login & writing new event 
+	- restructure lva page (to make use of common functionality -> Parse lva information)
+	- Implement google calendar login & writing new event 
 
 - "Remove from favourites" shortcut
 
