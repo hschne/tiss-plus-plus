@@ -12,11 +12,11 @@ function LvaSearchPage() {
             return anotherTable.length != 0;
 
         }
-
         if(!AnotherTableExists()){
             var contentInner = $('#contentInner').get(0);
             var existingContent = contentInner.innerHTML;
             contentInner.innerHTML = existingContent + table;
+            $("#recent-lva-table").tablesorter({sortList: [[3,0], [0,0]]} );
         }
     }
 }
