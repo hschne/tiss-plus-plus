@@ -1,7 +1,7 @@
 /**
  * Created by hans on 18.09.15.
  */
-tpp.widgets.maps = (function () {
+maps = (function () {
 
     var _requests;
 
@@ -23,6 +23,7 @@ tpp.widgets.maps = (function () {
             var link = $(this);
             _createButton(link.get(0));
         });
+    };
     };
 
     return {

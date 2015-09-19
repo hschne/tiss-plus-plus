@@ -1,7 +1,7 @@
 /**
  * Created by hans on 18.09.15.
  */
-tpp.transfer = (function(){
+transfer = (function(){
     var actions = {
         RENDER_MAP: "RENDER_MAP",
         RENDER_COURSE_HISTORY: "RENDER_COURSE_HISTORY",
