@@ -23,7 +23,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
                 renderService.renderRecentCourses(val.courseList, sendResponse)
             });
         }
-        if(request.action == requests.ACTIONS.RENDER_REMINDER){
+        else if(request.action == requests.ACTIONS.RENDER_REMINDER){
             var found = templating.templates.filter(function(item) {
                 return item.name === templating.TEMPLATE_FILES.REMINDER_BUTTON;
             });
@@ -32,6 +32,12 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             }
             sendResponse(found[0].template);
         }
+        else if(request.action = requests.ACTIONS.CREATE_REMINDER) {
+
+
+            
+        }
+
 
     }
     return true;
