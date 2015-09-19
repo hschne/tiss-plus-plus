@@ -24,6 +24,8 @@
       "src/js/background/render-service.js",
       "src/js/requests.js",
       "src/js/templating.js",
+      "src/js/calendar.js",
+      "src/js/identity.js",
       "src/js/background/background.js"
 ]
   },

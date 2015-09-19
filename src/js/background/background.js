@@ -33,9 +33,11 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             sendResponse(found[0].template);
         }
         else if(request.action = requests.ACTIONS.CREATE_REMINDER) {
-
-
-            
+            identity.authenticate();
+            calendar.init(identity);
+            calendar.createEvent(request.data, function(){
+                //uiui
+            });
         }
 
 
