@@ -7,24 +7,19 @@ QUnit.begin(function () {
 });
 QUnit.test('Add room button to link', function (assert) {
     var currentRoomLink = "<a href='/events/roomSchedule.xhtml'>Room Name</a>";
-    var pageContentMock = "<div id='linkContainer'>"+currentRoomLink+"</div>";
+    var pageContentMock = "<div id='linkContainer'>" + currentRoomLink + "</div>";
     $('#qunit-fixture').append(pageContentMock);
 
-
     var requests = {
-        renderMap: function() {
-            return "<div></div>";}
-    }
-    var mock = sinon.mock(requests);
-    mock.expects("renderMap").once().withExactArgs("Room Name");
+        renderMap: sinon.stub().yields("<div></div>")
 
-    var mapWidget = tpp.widgets.maps;
-    mapWidget.init()
+    };
+
+    maps.init(requests);
 
     var done = assert.async();
     setTimeout(function () {
-        mock.verify();
         assert.equal($('#linkContainer').children().length, 2, "Another link was inserted");
         done();
-    });
+    })
 });

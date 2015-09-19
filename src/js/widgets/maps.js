@@ -24,7 +24,6 @@ maps = (function () {
             _createButton(link.get(0));
         });
     };
-    };
 
     return {
         init: init
