@@ -4,12 +4,14 @@ TODO:
 
 - Create some thing resembling a build process
 
+- Restructure project using modules
+
 - Room Maps:
 	- Test manually that as many links as possible work (with Tiss)
 	
 - Registration Reminder
-	- restructure lva page (to make use of common functionality -> Parse lva information)
-	- Implement google calendar login & writing new event 
+	- Retrieve calendars and write new event to default one
+	- Implement notification (event created...)
 
 - "Remove from favourites" shortcut
 
