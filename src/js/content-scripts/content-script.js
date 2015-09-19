@@ -26,8 +26,8 @@ if (pageUrl.indexOf(courseSearchPageUrl) > -1) {
 }
 
 if(pageUrl.indexOf(courseRegistrationUrl) > -1){
-    var registrationPage = new CourseRegistrationPage();
-    registrationPage.renderRemindButton();
+    requests.init(chrome.runtime);
+    reminder.init(requests);
 }
 
 
