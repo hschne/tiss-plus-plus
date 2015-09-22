@@ -10,12 +10,31 @@ var reminder = (function(){
         _createReminderButton();
     };
 
+    var _getTextWithoutChildren = function(element) {
+        return element.clone()
+            .children()
+            .remove()
+            .end()
+            .text();
+
+    };
+
+    var _sanitizeText = function(text){
+        return text.replace(/(\r\n|\n|\r)/gm,"").trim();
+    };
+
     var _getReminderData = function(){
         var registrationBegin = $("#registrationForm\\:begin").text();
         //text is of form 01.01.2015, 12:00
         var datePart = registrationBegin.split(',')[0].trim();
+        var yearMonthDay = datePart.split('.');
         var timePart = registrationBegin.split(',')[1].trim();
-        return { date: datePart, time: timePart};
+        var hoursMinutes = timePart.split(':');
+        var date = new Date(yearMonthDay[2], parseInt(yearMonthDay[1])-1, yearMonthDay[0], hoursMinutes[0], hoursMinutes[1], 0, 0).toJSON();
+        var $contentInner = $('#contentInner');
+        var header = $contentInner.find('h1').first();
+        var name =  _sanitizeText(_getTextWithoutChildren(header));
+        return { name: name, date: date};
     };
 
     var _createReminder = function(){

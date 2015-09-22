@@ -4,15 +4,14 @@ TODO:
 
 - Create some thing resembling a build process
 
-- Restructure project using modules
+- Restructure WHOLE project using modules (missing: courseTable, maps...)
 
 - Room Maps:
 	- Test manually that as many links as possible work (with Tiss)
 	
 - Registration Reminder
-	- Write event with dynamic name (lva name and date) to calendar
-	- Implement response handling (error, success...)
-	- Implement notification (event created...)
+	- Show button only if registration possible
+	- Implement notification (event created on that date, event creation failed...)
 
 - "Remove from favourites" shortcut
 

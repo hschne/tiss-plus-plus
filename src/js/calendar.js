@@ -7,16 +7,16 @@ var calendar = (function() {
 
     var _CALENDAR_EVENT_URI = "https://www.googleapis.com/calendar/v3/calendars/primary/events";
 
-
     var init = function(identity){
         _identity = identity;
     };
 
-    var _createEventData = function(eventData) {
-        var startTime = new Date('2015-09-30T09:00:00').toJSON();
-        var endTime = new Date('2015-09-30T09:05:00').toJSON();
+    var _createEventData = function(data) {
+        var startTime = new Date(Date.parse(data.date));
+        var endTime = new Date(startTime);
+        endTime.setMinutes(startTime.getMinutes() + 30)
         var event = {
-            'summary': 'Anmeldung für LVA',
+            'summary': 'Anmeldung für ' + data.name,
             'start': {
                 'dateTime': startTime
             },
@@ -33,8 +33,8 @@ var calendar = (function() {
         return JSON.stringify(event);
     };
 
-    var createEvent = function(eventData, callback){
-        _identity.authenticatedRequest('POST', _CALENDAR_EVENT_URI, _createEventData(), true, function(error, status, response){
+    var createEvent = function(data, callback){
+        _identity.authenticatedRequest('POST', _CALENDAR_EVENT_URI, _createEventData(data), true, function(error, status, response){
             callback(response)
         });
     };
