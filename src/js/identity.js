@@ -2,7 +2,7 @@
  * Created by hans on 19.09.15.
  */
 var identity = (function () {
-    function xhrWithAuth(method, url, body, interactive, callback) {
+    function authenticatedRequest(method, url, body, interactive, callback) {
         var access_token;
 
         var retry = true;
@@ -73,6 +73,6 @@ var identity = (function () {
     return {
         authenticate: authenticate,
         revokeToken: revokeToken,
-        authenticatedRequest: xhrWithAuth
+        authenticatedRequest: authenticatedRequest
     }
 }());
