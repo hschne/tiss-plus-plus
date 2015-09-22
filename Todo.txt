@@ -10,7 +10,8 @@ TODO:
 	- Test manually that as many links as possible work (with Tiss)
 	
 - Registration Reminder
-	- Retrieve calendars and write new event to default one
+	- Write event with dynamic name (lva name and date) to calendar
+	- Implement response handling (error, success...)
 	- Implement notification (event created...)
 
 - "Remove from favourites" shortcut
@@ -23,5 +24,9 @@ TODO:
 
 - Recent LVAs:
 	- Make sure arrows in header change once sorting is activated
+
+- Settings:
+	- Specify default calendar, authenticate and revoke oauth
+	- Deactivate modules
 
 	

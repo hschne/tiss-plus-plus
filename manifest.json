@@ -20,6 +20,7 @@
   "background": {
     "scripts": ["lib/jquery/dist/jquery.js",
       "lib/mustache.js/mustache.js",
+      "lib/linqjs/linq.js",
       "src/js/background/course-list.js",
       "src/js/background/render-service.js",
       "src/js/requests.js",
@@ -42,7 +43,7 @@
     "identity"
   ],
   "oauth2": {
-    "client_id": "782460620358-vqto8jsqd7i0cjl5bft7kmgvlc885udn.apps.googleusercontent.com",
+    "client_id": "782460620358-ilfn0jc3ejg7djlnmes9gt7bfue527qo.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/calendar"
     ]
