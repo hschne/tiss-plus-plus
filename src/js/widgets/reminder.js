@@ -45,15 +45,18 @@ var reminder = (function(){
     };
 
     var _createReminderButton = function(){
-        _requests.renderReminder(function(reminderButton){
-            var header = $(".groupHeaderWrapper").get(0);
-            header.innerHTML = header.innerHTML + reminderButton;
-            var reminderButton =  $("#reminder-button");
-            reminderButton.click(function(){
-                _createReminder();
-            });
-        })
+        var registrationStatus = $(".header_element span").text();
+        if (registrationStatus.indexOf("Anmeldung ab") > -1) {
+            _requests.renderReminder(function(reminderButton){
+                var header = $(".groupHeaderWrapper").get(0);
 
+                header.innerHTML = header.innerHTML + reminderButton;
+                var reminderButton =  $("#reminder-button");
+                reminderButton.click(function(){
+                    _createReminder();
+                });
+            })
+        }
     };
 
     return {

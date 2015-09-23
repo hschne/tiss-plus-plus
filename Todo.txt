@@ -1,5 +1,7 @@
 TODO:
 
+- Change unit tests to use mocha
+
 - Update readme.md (with planned features and stuffs)
 
 - Create some thing resembling a build process
@@ -16,6 +18,8 @@ TODO:
 - "Remove from favourites" shortcut
 
 /////////////////// NO MORE FEATURES FOR 0.1 //////////////////////////
+
+- Add integration tests
 
 - Room Maps: 
 	- Make sure items are rendered in background page

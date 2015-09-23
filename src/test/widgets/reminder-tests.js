@@ -5,8 +5,22 @@ QUnit.module("Reminder widget tests");
 QUnit.begin(function () {
     $('body').append('<div id="qunit-fixture"></div>');
 });
-QUnit.test('Add reminder button', function (assert) {
-    var pageContentMock = "<div class='groupHeaderWrapper'></div>" +
+QUnit.test('Should display reminder if registration is possible in the future', function (assert) {
+    var pageContentMock = "<div class='groupHeaderWrapper'><div class='header_element'><span>Anmeldung ab 05.10.15</span></div></div>" +
+        "<div id='registrationForm:begin'>01.01.2015</div>";
+    $('#qunit-fixture').append(pageContentMock);
+
+    var requests = {
+        renderReminder: sinon.stub().yields("<button></button>")
+    };
+    reminder.init(requests);
+
+    assert.equal($('.groupHeaderWrapper').children().length, 2, "Reminder was created");
+
+});
+
+QUnit.test('Should not display reminder if registration over or possible', function (assert) {
+    var pageContentMock = "<div class='groupHeaderWrapper'><div class='header_element'><span>Anmeldung möglich</span></div></div>" +
         "<div id='registrationForm:begin'>01.01.2015</div>";
     $('#qunit-fixture').append(pageContentMock);
 
@@ -19,9 +33,10 @@ QUnit.test('Add reminder button', function (assert) {
 
 });
 
+
 QUnit.test('Create event on click', function () {
     var pageContentMock = "<div id='contentInner'><h1>Lva Name</h1></div>" +
-        "<div class='groupHeaderWrapper'></div>" +
+        "<div class='groupHeaderWrapper'> <div class='header_element'><span>Anmeldung ab 01.01.2015</span></div></div>"  +
         "<div id='registrationForm:begin'>21.09.2015, 12:00</div>";
     $('#qunit-fixture').append(pageContentMock);
 
