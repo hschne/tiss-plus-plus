@@ -1,11 +1,11 @@
 TODO:
 
-- Registration Reminder
-	- Test for fails (pull inet connection or something)
 
 - Change unit tests to use mocha
 
 - Restructure WHOLE project using modules (missing: courseTable, maps...)
+
+- "Remove from favourites" shortcut
 
 - Update readme.md (with current and planned features, and some info for devs)
 
@@ -14,7 +14,9 @@ TODO:
 - Room Maps:
 	- Test manually that as many links as possible work (with Tiss)
 
-- "Remove from favourites" shortcut
+- Registration Reminder
+	- Test for fails (pull inet connection or something)
+
 
 - Clean up & publish to webstore
 
