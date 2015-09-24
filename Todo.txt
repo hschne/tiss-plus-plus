@@ -1,7 +1,7 @@
 TODO:
 
 - Registration Reminder
- 	- Implement notification (event created on that date, event creation failed...)
+	- Test for fails (pull inet connection or something)
 
 - Change unit tests to use mocha
 

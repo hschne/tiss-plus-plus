@@ -35,7 +35,12 @@ var calendar = (function() {
 
     var createEvent = function(data, callback){
         _identity.authenticatedRequest('POST', _CALENDAR_EVENT_URI, _createEventData(data), true, function(error, status, response){
-            callback(response)
+            if(error != null){
+                callback({type: "ERROR", message: error})
+            }
+            else {
+                callback({type: "NOTIFICATION", message: "Event created"})
+            }
         });
     };
 
