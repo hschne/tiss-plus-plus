@@ -1,18 +1,25 @@
 /**
  * Created by hasch on 06.09.2015.
  */
+/*global chrome */
+/*global Mustache */
+/*global requests */
+/*global courseHistory */
+/*global templating */
 requests.init(chrome.runtime);
-templating.init();
+templating.init(Mustache);
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    'use strict';
     if (request) {
-        if(request.action == "GetMapButton"){
-            var renderService = new RenderService(chrome.runtime);
+        if(request.action === "GetMapButton"){
+
+            var renderService = templating.render(templating.t);
             renderService.renderMapButton(request.data, sendResponse)
         }
         else if (request.action == "UpdateCourseList") {
             chrome.storage.sync.get("courseList", function (val) {
-                var courseList = new CourseList(val.courseList);
+                var courseList = new courseHistory.CourseList(val.courseList);
                 courseList.add(request.data);
                 chrome.storage.sync.set({"courseList": courseList.get()});
             });
