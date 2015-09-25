@@ -1,3 +1,5 @@
+
+
 QUnit.module("Course list tests")
 QUnit.test('Add course to empty list', function (assert) {
     var newCourse = CreateDummyCourse();
