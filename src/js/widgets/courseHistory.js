@@ -1,7 +1,7 @@
 /**
  * Created by hans on 25.09.15.
  */
-var recentCourses = (function () {
+var courseHistory = (function () {
 
     var _requests;
 
@@ -62,13 +62,10 @@ var recentCourses = (function () {
         return text.replace(/(\r\n|\n|\r)/gm, "").trim();
     };
 
-
-
-
     return {
         init: init,
         update: update,
-        display: display,
+        display: display
     };
 })();
 
