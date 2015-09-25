@@ -78,12 +78,12 @@ var reminder = (function () {
         var type = result.type;
         var reminderButton = $("#reminder-button");
         if (type == "ERROR") {
-            reminderButton.notify(result.message, "error");
+            reminderButton.notify(result.data, "error");
             console.log("Error: " +result.error);
         }
         else {
-            reminderButton.notify(result.message, "success");
-            console.log(result.message)
+            reminderButton.notify(result.data, "success");
+            console.log(result.data)
         }
     };
 

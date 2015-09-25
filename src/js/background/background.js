@@ -7,19 +7,22 @@
 /*global courseHistory */
 /*global templating */
 requests.init(chrome.runtime);
-templating.init(Mustache);
+templating.init(chrome.runtime, Mustache);
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     'use strict';
     if (request) {
         if(request.action === "GetMapButton"){
-
-            var renderService = templating.render(templating.t);
-            renderService.renderMapButton(request.data, sendResponse)
+            var mapButton = templating.TEMPLATE.MAP_BUTTON;
+            templating.render(mapButton, request.data, function(result) {
+                sendResponse({type: 'Basic', data: result});
+            }, function(error){
+                sendResponse({type: 'Error', data: error})
+            });
         }
         else if (request.action == "UpdateCourseList") {
-            chrome.storage.sync.get("courseList", function (val) {
-                var courseList = new courseHistory.CourseList(val.courseList);
+            chrome.storage.sync.get("courseList", function (result) {
+                var courseList = new courseHistory.CourseList(result.courseList);
                 courseList.add(request.data);
                 chrome.storage.sync.set({"courseList": courseList.get()});
             });
@@ -43,7 +46,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             identity.authenticate();
             calendar.init(identity);
             calendar.createEvent(request.data, function(result){
-                sendResponse(result);
+                sendResponse({type: "Basic", data: result });
+            }, function(error){
+                sendResponse({type: "Error", data: error})
             });
         }
 

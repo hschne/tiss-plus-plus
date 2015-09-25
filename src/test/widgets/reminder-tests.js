@@ -70,7 +70,7 @@ QUnit.test('Should display normal notification if event created', function (asse
         }
     };
     var mock = sinon.mock(requests);
-    mock.expects("createReminder").yields({type: "Notificaton", message: "Event created"});
+    mock.expects("createReminder").yields({type: "Notificaton", data: "Event created"});
     mock.expects("renderReminder").yields("<button id='reminder-button'></button>");
     var spy = sinon.spy(console, "log");
 

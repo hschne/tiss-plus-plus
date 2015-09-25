@@ -1,16 +1,13 @@
 /**
  * Created by hans on 25.09.15.
  */
-
-
 /* globals courseHistory */
-
-describe('course list', function(){
+describe('course list', function () {
     'use strict';
 
-    describe('add', function(){
+    describe('add', function () {
 
-        it('should add a course to an empty list', function(){
+        it('should add a course to an empty list', function () {
             var newCourse = CreateDummyCourse();
             var courseList = new courseHistory.CourseList();
             courseList.add(newCourse);
@@ -18,7 +15,7 @@ describe('course list', function(){
             expect(courseList.get().length).to.equal(1);
         });
 
-        it('should update existing courses', function(){
+        it('should update existing courses', function () {
             var courses = CreateExistingCourses(1);
             var courseList = new courseHistory.CourseList(courses);
             var newCourse = {
@@ -36,7 +33,7 @@ describe('course list', function(){
             expect(newList[0].date).to.not.equal("anotherDate");
         });
 
-        it('should remove oldest entry if more than 10 courses', function(){
+        it('should remove oldest entry if more than 10 courses', function () {
             var existingCourses = CreateExistingCourses(10);
             var courseList = new courseHistory.CourseList(existingCourses);
             var newCourse = CreateDummyCourse();
@@ -50,32 +47,33 @@ describe('course list', function(){
 
     });
 
+    function CreateExistingCourses(count) {
+        var courses = [];
+        for (var i = 0; i < count; i++) {
+            //Create courses with ascending date
+            courses.push(
+                {
+                    name: "existing" + i,
+                    number: "number" + i,
+                    semester: "semester" + i,
+                    date: new Date(i + "/01/2010").toJSON(),
+                    url: "someLink"
+                });
+        }
+        return courses;
+    }
+
+    function CreateDummyCourse() {
+        return {
+            name: "name",
+            number: "number",
+            semester: "semester",
+            date: new Date("01/01/2100").toJSON(),
+            url: "someLink"
+        };
+    }
 });
 
 
-function CreateExistingCourses(count) {
-    var courses = [];
-    for (var i = 0; i < count; i++) {
-        //Create courses with ascending date
-        courses.push(
-            {
-                name: "existing" + i,
-                number: "number" + i,
-                semester: "semester" + i,
-                date: new Date(i+"/01/2010").toJSON(),
-                url: "someLink"
-            });
-    }
-    return courses;
 
-}
-function CreateDummyCourse() {
-    return {
-        name: "name",
-        number: "number",
-        semester: "semester",
-        date: new Date("01/01/2100").toJSON(),
-        url: "someLink"
-    };
-}
 
