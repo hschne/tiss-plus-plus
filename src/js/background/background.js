@@ -22,7 +22,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         }
         else if (request.action == "UpdateCourseList") {
             chrome.storage.sync.get("courseList", function (result) {
-                var courseList = new courseHistory.CourseList(result.courseList);
+                var courseList = new courses.CourseList(result.courseList);
                 courseList.add(request.data);
                 chrome.storage.sync.set({"courseList": courseList.get()});
             });
