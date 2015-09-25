@@ -5,20 +5,44 @@ var calendar = (function() {
 
     var _identity;
 
-    var _CALENDAR_LIST_URI = "https://www.googleapis.com/calendar/v3/users/me/calendarList";
-
+    var _CALENDAR_EVENT_URI = "https://www.googleapis.com/calendar/v3/calendars/primary/events";
 
     var init = function(identity){
         _identity = identity;
     };
 
-    var createEvent = function(eventData, callback){
-        _identity.authenticatedRequest('GET',
-            _CALENDAR_LIST_URI, true, function(error, status, response){
-                var response = response;
-                var items = response.items;
-            })
-    }
+    var _createEventData = function(data) {
+        var startTime = new Date(Date.parse(data.date));
+        var endTime = new Date(startTime);
+        endTime.setMinutes(startTime.getMinutes() + 30)
+        var event = {
+            'summary': 'Anmeldung für ' + data.name,
+            'start': {
+                'dateTime': startTime
+            },
+            'end': {
+                'dateTime': endTime
+            },
+            'reminders': {
+                'useDefault': false,
+                'overrides': [
+                    {'method': 'popup', 'minutes': 10}
+                ]
+            }
+        };
+        return JSON.stringify(event);
+    };
+
+    var createEvent = function(data, callback){
+        _identity.authenticatedRequest('POST', _CALENDAR_EVENT_URI, _createEventData(data), true, function(error, status, response){
+            if(error != null){
+                callback({type: "ERROR", message: error})
+            }
+            else {
+                callback({type: "NOTIFICATION", message: "Event created"})
+            }
+        });
+    };
 
     return {
         init: init,

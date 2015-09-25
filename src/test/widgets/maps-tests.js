@@ -21,5 +21,5 @@ QUnit.test('Add room button to link', function (assert) {
     setTimeout(function () {
         assert.equal($('#linkContainer').children().length, 2, "Another link was inserted");
         done();
-    })
+    }, null)
 });

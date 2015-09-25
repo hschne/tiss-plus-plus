@@ -7,7 +7,10 @@
     {
       "matches": [ "https://tiss.tuwien.ac.at/*" ],
       "js": [
-        "lib/jquery/dist/jquery.js", "lib/tablesorter/jquery.tablesorter.js" ,
+        "lib/jquery/dist/jquery.js",
+        "lib/tablesorter/jquery.tablesorter.js" ,
+        "lib/notifyjs/dist/notify.js",
+        "lib/notifyjs/dist/styles/bootstrap/notify-bootstrap.js",
         "src/js/content-scripts/course-page.js",
         "src/js/content-scripts/course-search-page.js",
         "src/js/requests.js",
@@ -42,7 +45,7 @@
     "identity"
   ],
   "oauth2": {
-    "client_id": "782460620358-vqto8jsqd7i0cjl5bft7kmgvlc885udn.apps.googleusercontent.com",
+    "client_id": "782460620358-ilfn0jc3ejg7djlnmes9gt7bfue527qo.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/calendar"
     ]

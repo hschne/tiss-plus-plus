@@ -27,7 +27,7 @@ if (pageUrl.indexOf(courseSearchPageUrl) > -1) {
 
 if(pageUrl.indexOf(courseRegistrationUrl) > -1){
     requests.init(chrome.runtime);
-    reminder.init(requests);
+    reminder.init(requests, $.notify);
 }
 
 
