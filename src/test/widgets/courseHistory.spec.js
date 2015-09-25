@@ -18,8 +18,8 @@ describe('history', function () {
     });
 
     describe('update', function () {
-        it('should send course data from the page', function () {
-            var courseInfo = $("<div id='contentInner'><h1><span class='light'>184.685</span>Lva Name</h1><div id='subHeader'>2015W, VU, 2.0h</div></div>");
+        it('should send pretty course data from the page', function () {
+            var courseInfo = $("<div id='contentInner'><h1><span class='light'>184.685  </span>Lva Name  </h1><div id='subHeader'>2015W, VU, 2.0h</div></div>");
             $('#mocha-fixture').append(courseInfo);
 
             var request = {
