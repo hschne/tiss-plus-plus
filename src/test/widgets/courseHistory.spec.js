@@ -43,26 +43,28 @@ describe('history', function () {
             var requests = {
                 renderHistory: sinon.stub()
             };
-            requests.renderHistory.yields('<div>New content</div>');
+            requests.renderHistory.yields({ data: "<div id='newContent'>New content</div>" });
 
             courseHistory.init(requests);
             courseHistory.display();
 
-            expect(existingContent.length).to.equal(1);
+            var newContent = $("#newContent");
+            expect(newContent.length).to.equal(1);
         });
 
         it('should not display a table if another one is already displayed', function () {
-            var existingContent = $('<div id="contentInner"><div id="#courseList\\:courseTable">Existing content</div></div>')
+            var existingContent = $('<div id="contentInner"><div id="courseList:courseTable">Existing content</div></div>')
             $('#mocha-fixture').append(existingContent);
             var requests = {
                 renderHistory: sinon.stub()
             };
-            requests.renderHistory.yields('<div>New content</div>');
+            requests.renderHistory.yields("<div id='newContent'>New content</div>");
 
             courseHistory.init(requests);
             courseHistory.display();
 
-            expect(existingContent.length).to.equal(1);
+            var newContent = $("#newContent");
+            expect(newContent.length).to.equal(0);
 
         })
     })

@@ -1,5 +1,7 @@
 TODO:
 
+- Clean up content script & background page
+
 - Update readme.md (with current and planned features, and some info for devs)
 
 - Use require.js for structure
