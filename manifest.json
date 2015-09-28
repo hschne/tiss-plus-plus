@@ -33,7 +33,7 @@
 ]
   },
   "icons": {
-    "128": "resources/logo.png"
+    "128": "resources/logo_128.png"
   },
   "web_accessible_resources": [
     "resources/*",

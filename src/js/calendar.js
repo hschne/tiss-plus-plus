@@ -33,13 +33,13 @@ var calendar = (function() {
         return JSON.stringify(event);
     };
 
-    var createEvent = function(data, callback){
+    var createEvent = function(data, successCallback, errorCallback){
         _identity.authenticatedRequest('POST', _CALENDAR_EVENT_URI, _createEventData(data), true, function(error, status, response){
             if(error != null){
-                callback({type: "ERROR", message: error})
+                errorCallback(error);
             }
             else {
-                callback({type: "NOTIFICATION", message: "Event created"})
+                successCallback("Event created");
             }
         });
     };

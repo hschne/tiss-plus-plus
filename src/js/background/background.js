@@ -1,18 +1,28 @@
 /**
  * Created by hasch on 06.09.2015.
  */
+/*global chrome */
+/*global Mustache */
+/*global requests */
+/*global courseHistory */
+/*global templating */
 requests.init(chrome.runtime);
-templating.init();
+templating.init(chrome.runtime, Mustache);
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    'use strict';
     if (request) {
-        if(request.action == "GetMapButton"){
-            var renderService = new RenderService(chrome.runtime);
-            renderService.renderMapButton(request.data, sendResponse)
+        if(request.action === "GetMapButton"){
+            var mapButton = templating.TEMPLATE.MAP_BUTTON;
+            templating.render(mapButton, request.data, function(result) {
+                sendResponse({type: 'Basic', data: result});
+            }, function(error){
+                sendResponse({type: 'Error', data: error})
+            });
         }
         else if (request.action == "UpdateCourseList") {
-            chrome.storage.sync.get("courseList", function (val) {
-                var courseList = new CourseList(val.courseList);
+            chrome.storage.sync.get("courseList", function (result) {
+                var courseList = new courses.CourseList(result.courseList);
                 courseList.add(request.data);
                 chrome.storage.sync.set({"courseList": courseList.get()});
             });
@@ -36,7 +46,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             identity.authenticate();
             calendar.init(identity);
             calendar.createEvent(request.data, function(result){
-                sendResponse(result);
+                sendResponse({type: "Basic", data: result });
+            }, function(error){
+                sendResponse({type: "Error", data: error})
             });
         }
 

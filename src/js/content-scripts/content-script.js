@@ -8,25 +8,18 @@ var newCourseUrl = "/course/courseDetails.xhtml";
 var courseSearchPageUrl = "/course/courseList.xhtml";
 var courseRegistrationUrl ="/course/courseRegistration.xhtml";
 
+requests.init(chrome.runtime);
+courseHistory.init(requests);
 
 if (pageUrl.indexOf(favouriteCourseUrl) > -1 || pageUrl.indexOf(newCourseUrl) > -1) {
-    var coursePage = new CoursePage(pageUrl);
-    coursePage.displayRoomMaps();
-    chrome.runtime.sendMessage({
-        action: 'UpdateCourseList',
-        data: coursePage.getCourse()
-    });
+    maps.init(requests);
+    courseHistory.update();
 }
 
 if (pageUrl.indexOf(courseSearchPageUrl) > -1) {
-    chrome.runtime.sendMessage({action: "GetRecentCourseTable"}, function (courseTable) {
-        var courseSearchPage = new CourseSearchPage();
-        courseSearchPage.displayRecentlyVisitedCourses(courseTable);
-    });
+    courseHistory.display();
 }
-
 if(pageUrl.indexOf(courseRegistrationUrl) > -1){
-    requests.init(chrome.runtime);
     reminder.init(requests, $.notify);
 }
 
