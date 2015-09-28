@@ -1,18 +1,16 @@
 TODO:
 
-- Registration Reminder
-	- Test for fails (pull inet connection or something)
-
-- Change unit tests to use mocha
-
-- Restructure WHOLE project using modules (missing: courseTable, maps...)
-
 - Update readme.md (with current and planned features, and some info for devs)
+
+- Use require.js for structure
 
 - Create some thing resembling a build process (gulp)
 
 - Room Maps:
 	- Test manually that as many links as possible work (with Tiss)
+
+- Registration Reminder
+	- Test for fails (pull inet connection or something)
 
 - "Remove from favourites" shortcut
 
@@ -23,11 +21,11 @@ TODO:
 - Add integration tests
 
 - Room Maps: 
-	- Make sure items are rendered in background page
-	- Show small popup of image (like reddit, if possible!)	
+	- Show small popup of image (like reddit, if possible!)
 
 - Recent LVAs:
 	- Make sure arrows in header change once sorting is activated
+
 
 - Settings:
 	- Specify default calendar, authenticate and revoke oauth
