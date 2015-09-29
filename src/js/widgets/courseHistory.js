@@ -34,7 +34,7 @@ var courseHistory = (function () {
         var number = _sanitizeText(header.find('span').first().text());
         var semester = _sanitizeText(subHeader.text().split(',')[0]);
         var date = new Date().toJSON();
-        var url = location.url;
+        var url = location.href;
         //Only return if page could be loaded properly
         if (name != "" && number != "" && semester != "") {
             _requests.updateHistory({

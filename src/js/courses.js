@@ -55,7 +55,7 @@ var courses = (function () {
         return _formatDates(_courses);
     };
 
-    var _formatDates = function(courseList) {
+    var _formatDates = function(courseList){
         for (var i = 0; i < courseList.length; i++) {
             var course = courseList[i];
             course.date = _formatSingleDate(course.date);

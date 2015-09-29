@@ -35,8 +35,9 @@ TODO:
 	- Specify default calendar, authenticate and revoke oauth
 	- Deactivate modules
 	
-- More reminders:
-	- Prüfungsanmeldung, etc. etc.
+- Reminders:
+	- Collision detection -> Don't create another event if one already exists for that time
+	- More reminders: Prüfungsanmeldung, etc. etc.
 
 - Bookmarks on site? (not sure about this one)
 

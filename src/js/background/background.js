@@ -21,7 +21,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             courses.save();
         }
         else if (request.action == requests.ACTIONS.RENDER_COURSE_HISTORY) {
-            templating.render(templating.TEMPLATE.COURSE_HISTORY, { courses: courses.get }, function (result) {
+            var renderData = { courses: courses.get()};
+            templating.render(templating.TEMPLATE.COURSE_HISTORY, renderData, function (result) {
                 sendResponse(result)
             }, function (error) {
                 sendResponse({type: 'Error', data: error});
