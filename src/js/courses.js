@@ -47,12 +47,32 @@ var courses = (function () {
         }
     };
 
-    var save = function(){
-        _chromeStorageSync.set({ "courses": _courses});
+    var save = function () {
+        _chromeStorageSync.set({"courses": _courses});
     };
 
-    var get = function(){
-        return _courses;
+    var get = function () {
+        return _formatDates(_courses);
+    };
+
+    var _formatDates = function(courseList) {
+        for (var i = 0; i < courseList.length; i++) {
+            var course = courseList[i];
+            course.date = _formatSingleDate(course.date);
+        }
+        return courseList;
+    };
+
+    var _formatSingleDate = function(date) {
+        var actualDate = new Date(date);
+        var hours = actualDate.getHours();
+        var minutes = actualDate.getMinutes();
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+        var strTime = hours + ':' + minutes;
+        var date =("0" + actualDate.getDate()).slice(-2);
+        var month = ("0" + (actualDate.getMonth() + 1)).slice(-2);
+        return date +"." + month +"." + actualDate.getFullYear() + "  " + strTime;
     };
 
     return {
