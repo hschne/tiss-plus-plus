@@ -1,10 +1,5 @@
 TODO:
 
-
-- Change unit tests to use mocha
-
-- Restructure WHOLE project using modules (missing: courseTable, maps...)
-
 - "Remove from favourites" shortcut
 
 - Update readme.md (with current and planned features, and some info for devs)
@@ -17,12 +12,14 @@ TODO:
 - Registration Reminder
 	- Test for fails (pull inet connection or something)
 
-
 - Clean up & publish to webstore
 
 /////////////////// NO MORE FEATURES FOR 0.1 //////////////////////////
 
 - Add integration tests
+
+- Go to most recent semester
+	- If next semester is 2015W, make any links point to 2015W if it exists
 
 - Room Maps: 
 	- Make sure items are rendered in background page
@@ -34,6 +31,9 @@ TODO:
 - Settings:
 	- Specify default calendar, authenticate and revoke oauth
 	- Deactivate modules
+	
+- More reminders:
+	- Prüfungsanmeldung, etc. etc.
 
 - Bookmarks on site? (not sure about this one)
 
