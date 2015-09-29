@@ -17,7 +17,7 @@ var courseHistory = (function () {
 
     var _displayTable = function (table) {
         var anotherTable = $("#courseList\\:courseTable");
-        if (anotherTable.length != 0) {
+        if (anotherTable.length == 0) {
             var contentInner = $('#contentInner').get(0);
             var existingContent = contentInner.innerHTML;
             contentInner.innerHTML = existingContent + table;
