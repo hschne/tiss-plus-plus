@@ -9,7 +9,7 @@ var courses = (function () {
     var init = function (chromeStorageSync) {
         _chromeStorageSync = chromeStorageSync;
         _chromeStorageSync.get("courses", function (result) {
-            _courses = result
+            _courses = result.courses || []
         });
     };
 
@@ -45,12 +45,10 @@ var courses = (function () {
                 _courses.shift();
             }
         }
-
     };
 
     var save = function(){
-        courseList.add(request.data);
-        _chromeStorageSync.set({ "courses": courseList.get()});
+        _chromeStorageSync.set({ "courses": _courses});
     };
 
     var get = function(){

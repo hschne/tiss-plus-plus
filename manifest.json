@@ -11,20 +11,22 @@
         "lib/tablesorter/jquery.tablesorter.js" ,
         "lib/notifyjs/dist/notify.js",
         "lib/notifyjs/dist/styles/bootstrap/notify-bootstrap.js",
-        "src/js/content-scripts/course-page.js",
-        "src/js/content-scripts/course-search-page.js",
         "src/js/requests.js",
         "src/js/widgets/reminder.js",
+        "src/js/widgets/maps.js",
+        "src/js/widgets/courseHistory.js",
         "src/js/content-scripts/content-script.js"
       ],
       "css": ["css/background.css"]
     }
   ],
   "background": {
-    "scripts": ["lib/jquery/dist/jquery.js",
+    "scripts": [
+      "lib/jquery/dist/jquery.js",
       "lib/mustache.js/mustache.js",
-      "src/js/background/course-list.js",
-      "src/js/background/render-service.js",
+      "src/js/courses.js",
+      "src/js/rooms.js",
+      "src/js/templating.js",
       "src/js/requests.js",
       "src/js/templating.js",
       "src/js/calendar.js",
