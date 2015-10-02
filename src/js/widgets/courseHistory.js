@@ -11,7 +11,7 @@ var courseHistory = (function () {
 
     var display = function () {
         _requests.renderHistory(null, function (result) {
-            _displayTable(result)
+            _displayTable(result.data)
         })
     };
 

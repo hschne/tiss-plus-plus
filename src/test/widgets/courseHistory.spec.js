@@ -43,7 +43,7 @@ describe('history', function () {
             var requests = {
                 renderHistory: sinon.stub()
             };
-            requests.renderHistory.yields({ data: "<div id='newContent'>New content</div>" });
+            requests.renderHistory.yields({ data: "<div id='newContent' >New content</div>" });
 
             courseHistory.init(requests);
             courseHistory.display();
