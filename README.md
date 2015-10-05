@@ -1,7 +1,6 @@
 ![TISS++](resources/logo_banner.png) 
 ---
 
-
 TISS++ is a Chrome extension that aims to improve the usability of TU Wien's [TISS](https://tiss.tuwien.ac.at/). It adds various small utility functions and improvements to existing pages, such as search or course details. 
 
 ## Installation
@@ -25,4 +24,4 @@ Guidelines and documentation for developers will be added in the near future.
 
 ## License
 
-For license information see the file 'License'.
+For license information see [License](LICENSE).

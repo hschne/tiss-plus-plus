@@ -1,7 +1,5 @@
 TODO:
 
-- Update readme.md (with current and planned features, and some info for devs)
-
 - Use require js
 
 - Create some thing resembling a build process (gulp)
@@ -17,6 +15,8 @@ TODO:
 /////////////////// NO MORE FEATURES FOR 0.1 //////////////////////////
 
 - Add integration tests
+
+- Add proper feature and developer documentation (screenshots, how to build etc.)
 
 - Go to most recent semester
 	- If next semester is 2015W, make any links point to 2015W if it exists
