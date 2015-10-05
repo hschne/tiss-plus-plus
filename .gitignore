@@ -50,4 +50,6 @@ node_modules/
 npm-debug.log
 
 #Covers other things to exclude
-lib/
+src/lib/
+build/
+dist/

@@ -23,7 +23,7 @@
     display: inline-block;
     margin-top: -2px;
     margin-left: 20px;
-    background: url('chrome-extension://__MSG_@@extension_id__/resources/reminder-16.png') no-repeat;
+    background: url('chrome-extension://__MSG_@@extension_id__/icons/reminder-16.png') no-repeat;
     -o-transition:.5s;
     -moz-transition:.5s;
     -webkit-transition:.5s;
@@ -31,7 +31,7 @@
 
 #reminder-button:hover,
 #reminder-button:active {
-    background: url('chrome-extension://__MSG_@@extension_id__/resources/reminder-16-active.png') no-repeat
+    background: url('chrome-extension://__MSG_@@extension_id__/icons/reminder-16-active.png') no-repeat
 }
 
 .notifyjs-tiss-base {
