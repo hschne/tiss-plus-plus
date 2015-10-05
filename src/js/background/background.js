@@ -4,7 +4,7 @@
 requests.init(chrome.runtime);
 templating.init(chrome.runtime, Mustache);
 templating.load();
-rooms.init(chrome.runtime);
+rooms.init(chrome.runtime,templating);
 courses.init(chrome.storage.sync);
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     'use strict';
