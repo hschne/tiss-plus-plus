@@ -1,7 +1,5 @@
 TODO:
 
-- Use require js
-
 - Create some thing resembling a build process (gulp)
 
 - Room Maps:
