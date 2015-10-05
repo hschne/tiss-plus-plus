@@ -1,7 +1,5 @@
 TODO:
 
-- "Remove from favourites" shortcut
-
 - Update readme.md (with current and planned features, and some info for devs)
 
 - Use require js
