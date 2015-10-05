@@ -11,11 +11,11 @@
         "lib/tablesorter/jquery.tablesorter.js" ,
         "lib/notifyjs/dist/notify.js",
         "lib/notifyjs/dist/styles/bootstrap/notify-bootstrap.js",
-        "src/js/requests.js",
-        "src/js/widgets/reminder.js",
-        "src/js/widgets/maps.js",
-        "src/js/widgets/courseHistory.js",
-        "src/js/content-scripts/content-script.js"
+        "js/requests.js",
+        "js/widgets/reminder.js",
+        "js/widgets/maps.js",
+        "js/widgets/courseHistory.js",
+        "js/content-scripts/content-script.js"
       ],
       "css": ["css/background.css"]
     }
@@ -35,7 +35,7 @@
 ]
   },
   "icons": {
-    "128": "resources/logo_128.png"
+    "128": "icons/logo_128.png"
   },
   "web_accessible_resources": [
     "resources/*",

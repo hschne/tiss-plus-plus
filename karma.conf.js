@@ -16,10 +16,10 @@ module.exports = function (config) {
         // list of files / patterns to load in the browser
         files: [
             //Libs
-            'lib/jquery/dist/jquery.js',
-            'lib/mustache.js/mustache.js',
-            'lib/tablesorter/jquery.tablesorter.js',
-            'lib/notifyjs/dist/notify.js',
+            'src/lib/jquery/dist/jquery.js',
+            'src/lib/mustache.js/mustache.js',
+            'src/lib/tablesorter/jquery.tablesorter.js',
+            'src/lib/notifyjs/dist/notify.js',
 
             //Source
             'src/js/**/*.js',
@@ -72,4 +72,4 @@ module.exports = function (config) {
         // if true, Karma captures browsers, runs the tests and exits
         singleRun: false
     });
-}
+};
