@@ -32,8 +32,8 @@ var reminder = (function () {
             _requests.renderReminder(function (reminderButton) {
                 var header = $(".groupHeaderWrapper").get(0);
                 header.innerHTML = header.innerHTML + reminderButton;
-                var reminderButton = $("#reminder-button");
-                reminderButton.click(function () {
+                var button = $("#reminder-button");
+                button.click(function () {
                     _createCalendarEvent();
                 });
             })
@@ -82,8 +82,8 @@ var reminder = (function () {
             console.log("Error: " +result.error);
         }
         else {
-            reminderButton.notify(result.data, "success");
-            console.log(result.data)
+            reminderButton.notify(result, "success");
+            console.log(result)
         }
     };
 

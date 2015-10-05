@@ -40,14 +40,14 @@ describe('courses', function () {
                 name: "existing0",
                 number: "number0",
                 semester: "semester0",
-                date: "anotherDate",
+                date: new Date("01/01/2015").toJSON(),
                 url: "someLink"
             };
             courses.add(newCourse);
 
             var newList = courses.get();
             expect(newList.length).to.equal(1);
-            expect(newList[0].date).to.equal("anotherDate");
+            expect(newList[0].date).to.equal("01.01.2015, 12:00");
         });
 
         it('should remove oldest entry if more than 10 courses', function () {
@@ -89,7 +89,7 @@ describe('courses', function () {
                     url: "someLink"
                 });
         }
-        return courses;
+        return { courses: courses };
     }
 
 });

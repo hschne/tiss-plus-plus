@@ -1,11 +1,10 @@
 TODO:
 
-
-- Fix that whole date affair in course history, also fix links not beeing rendered
-
 - "Remove from favourites" shortcut
 
 - Update readme.md (with current and planned features, and some info for devs)
+
+- Use require js
 
 - Create some thing resembling a build process (gulp)
 

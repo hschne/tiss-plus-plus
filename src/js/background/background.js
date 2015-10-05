@@ -39,7 +39,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             identity.authenticate();
             calendar.init(identity);
             calendar.createEvent(request.data, function (result) {
-                sendResponse({data: result});
+                sendResponse(result);
             }, function (error) {
                 sendResponse({type: "Error", data: error})
             });

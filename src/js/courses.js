@@ -52,15 +52,24 @@ var courses = (function () {
     };
 
     var get = function () {
-        return _formatDates(_courses);
+        return _formatDates();
     };
 
-    var _formatDates = function(courseList){
-        for (var i = 0; i < courseList.length; i++) {
-            var course = courseList[i];
-            course.date = _formatSingleDate(course.date);
+    var _formatDates = function(){
+        //Make a deep copy and format dates in copy
+        var copy = [];
+        for (var i = 0; i < _courses.length; i++) {
+            var course = _courses[i];
+            var newCourse = {
+                name: course.name,
+                number: course.number,
+                semester: course.semester,
+                date: _formatSingleDate(course.date),
+                url: course.url
+            }
+            copy.push(newCourse);
         }
-        return courseList;
+        return copy;
     };
 
     var _formatSingleDate = function(date) {
@@ -72,7 +81,7 @@ var courses = (function () {
         var strTime = hours + ':' + minutes;
         var date =("0" + actualDate.getDate()).slice(-2);
         var month = ("0" + (actualDate.getMonth() + 1)).slice(-2);
-        return date +"." + month +"." + actualDate.getFullYear() + "  " + strTime;
+        return date +"." + month +"." + actualDate.getFullYear() + ", " + strTime;
     };
 
     return {
