@@ -3,8 +3,7 @@
  */
 
 /* global chrome */
-var templating;
-templating = (function () {
+var templating = (function () {
     'use strict';
 
     var _mustache;

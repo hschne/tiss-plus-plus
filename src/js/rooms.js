@@ -5,6 +5,8 @@ var rooms = (function () {
 
     var _chromeRuntime;
 
+    var _templating;
+
     var _allRooms;
 
     var BASE_URL = "http://www.wegweiser.ac.at";
@@ -16,7 +18,7 @@ var rooms = (function () {
     };
 
     var _loadAllRooms = function () {
-        var url = chrome.extension.getURL('resources/room-links.json');
+        var url = _chromeRuntime.getURL('resources/room-links.json');
         $.getJSON(url, function (data) {
             _allRooms = data;
         });
@@ -31,13 +33,17 @@ var rooms = (function () {
         }
     };
 
+    var get = function(){
+        return _allRooms;
+    }
+
     var getMap = function (roomName, successCallback, errorCallback) {
         var url = _getMapUrl(roomName);
         if (url != null) {
             var renderData = {
                 url: url
             };
-            templating.render(templating.TEMPLATE.MAP_BUTTON, renderData, function (result) {
+            _templating.render(templating.TEMPLATE.MAP_BUTTON, renderData, function (result) {
                     successCallback(result);
                 }, function (error) {
                     errorCallback(error);
@@ -47,8 +53,10 @@ var rooms = (function () {
         }
     };
 
+
     return {
         init: init,
+        get: get,
         getMap: getMap
     }
 }());

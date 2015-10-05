@@ -1,12 +1,14 @@
 TODO:
 
-- Create some thing resembling a build process (gulp)
+- introduce jshint
 
 - Room Maps:
 	- Test manually that as many links as possible work (with Tiss)
 
 - Registration Reminder
 	- Test for fails (pull inet connection or something)
+
+- Test everything :{
 
 - Clean up & publish to webstore
 
@@ -16,11 +18,12 @@ TODO:
 
 - Add proper feature and developer documentation (screenshots, how to build etc.)
 
+- Make build work on travis
+
 - Go to most recent semester
 	- If next semester is 2015W, make any links point to 2015W if it exists
 
-- Room Maps: 
-	- Make sure items are rendered in background page
+- Room Maps:
 	- Show small popup of image (like reddit, if possible!)	
 
 - Recent LVAs:
@@ -33,7 +36,5 @@ TODO:
 - Reminders:
 	- Collision detection -> Don't create another event if one already exists for that time
 	- More reminders: Prüfungsanmeldung, etc. etc.
-
-- Bookmarks on site? (not sure about this one)
 
 	
