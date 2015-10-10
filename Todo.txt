@@ -2,15 +2,9 @@ TODO:
 
 - introduce jshint
 
-- Room Maps:
-	- Test manually that as many links as possible work (with Tiss)
-
-- Registration Reminder
-	- Test for fails (pull inet connection or something)
+- Clean up & publish to webstore
 
 - Test everything :{
-
-- Clean up & publish to webstore
 
 /////////////////// NO MORE FEATURES FOR 0.1 //////////////////////////
 
