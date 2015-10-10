@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "TISS++",
-  "description": "This extension improves TISS with additional functions",
+  "description": "This extension improves TISS with additional functions.",
   "version": "0.1",
   "content_scripts": [
     {
@@ -34,7 +34,7 @@
     "identity"
   ],
   "oauth2": {
-    "client_id": "782460620358-vqto8jsqd7i0cjl5bft7kmgvlc885udn.apps.googleusercontent.com",
+    "client_id": "782460620358-b9jt1i02d3mqnkku327ue2nqi2svd2i5.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/calendar"
     ]
