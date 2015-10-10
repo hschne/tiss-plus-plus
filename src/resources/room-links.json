@@ -13,7 +13,7 @@
   },
   {
     "link": "/static/plaene/gif/E_GEODHS_0119_00_1-1.gif",
-    "name": "EI 11 Geodäsie Hörsaal"
+    "name": "EI 11 Geodäsie HS"
   },
   {
     "link": "/static/plaene/gif/E_EI1_0037_00_1-1.gif",
@@ -21,11 +21,11 @@
   },
   {
     "link": "/static/plaene/gif/E_EI2_0037_00_1-1.gif",
-    "name": "EI 2 Pichelmayer Hörsaal"
+    "name": "EI 2 Pichelmayer HS"
   },
   {
     "link": "/static/plaene/gif/E_EI3A_0037_00_1-1.gif",
-    "name": "EI 3A"
+    "name": "EI 3A Hörsaal"
   },
   {
     "link": "/static/plaene/gif/E_EI3_0037_00_1-1.gif",
@@ -37,7 +37,7 @@
   },
   {
     "link": "/static/plaene/gif/E_EI5_0037_00_1-1.gif",
-    "name": "EI 5 Hochenegg Hörsaal"
+    "name": "EI 5 Hochenegg HS"
   },
   {
     "link": "/static/plaene/gif/E_EI6_0037_00_1-1.gif",
@@ -49,11 +49,11 @@
   },
   {
     "link": "/static/plaene/gif/E_EI8_0119_00_1-1.gif",
-    "name": "EI 8 Pötzl Hörsaal"
+    "name": "EI 8 Pötzl HS"
   },
   {
     "link": "/static/plaene/gif/E_EI9_0119_00_1-1.gif",
-    "name": "EI 9 Hlawka Hörsaal"
+    "name": "EI 9 Hlawka HS"
   },
   {
     "link": "/static/plaene/gif/E_FHHS8_0035_00_1-1.gif",
@@ -141,7 +141,7 @@
   },
   {
     "link": "/static/plaene/gif/E_HS11_0038_00_1-1.gif",
-    "name": "HS 11 Paul Ludwik Hörsaal"
+    "name": "HS 11 Paul Ludwik"
   },
   {
     "link": "/static/plaene/gif/E_HS13_0038_00_1-1.gif",
@@ -161,7 +161,7 @@
   },
   {
     "link": "/static/plaene/gif/E_HS18_0038_00_1-1.gif",
-    "name": "HS 18 Czuber Hörsaal"
+    "name": "HS 18 Czuber"
   },
   {
     "link": "/static/plaene/gif/E_HS4_0038_00_1-1.gif",
@@ -173,11 +173,11 @@
   },
   {
     "link": "/static/plaene/gif/E_HS7_0038_00_1-1.gif",
-    "name": "HS 7 Schütte-Lihotzky Hörsaal"
+    "name": "HS 7 Schütte-Lihotzky"
   },
   {
     "link": "/static/plaene/gif/E_HS8_0038_00_1-1.gif",
-    "name": "HS 8 Heinz Parkus Hörsaal"
+    "name": "HS 8 Heinz Parkus"
   },
   {
     "link": "/static/plaene/gif/E_HS9_0038_00_1-1.gif",
